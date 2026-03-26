@@ -5,7 +5,7 @@ export default function FAQSection({ t }) {
 
   return (
     <section style={{ background: 'var(--white)' }} className="py-16 md:py-20">
-      <div className="max-w-[760px] mx-auto px-5">
+      <div className="px-6 md:px-12 max-w-5xl mx-auto">
         <div className="mb-12 md:mb-14">
           <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-3" style={{ color: 'var(--gold)' }}>
             {t.faqEyebrow}
@@ -33,7 +33,7 @@ export default function FAQSection({ t }) {
                 </span>
               </button>
               <div className={`faq-answer ${openIndex === i ? 'open' : ''}`}>
-                <p className="font-jost text-[14px] font-light leading-[1.85] pb-6" style={{ color: 'var(--muted-brown)' }}>
+                <p className="font-jost text-[17px] font-light leading-[1.85] pb-6" style={{ color: 'var(--muted-brown)' }}>
                   {faq.a}
                 </p>
               </div>

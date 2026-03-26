@@ -12,7 +12,7 @@ const brands = [
 export default function BrandLogos({ t }) {
   return (
     <section style={{ background: 'var(--linen)' }}>
-      <div className="max-w-6xl mx-auto px-5 py-6 md:py-7">
+      <div className="px-6 md:px-12 py-6 md:py-7">
         {/* Desktop: static row */}
         <div className="hidden md:flex items-center gap-6">
           <span className="font-jost text-[10px] font-normal uppercase tracking-[0.16em] whitespace-nowrap mr-4" style={{ color: 'var(--oak)' }}>
@@ -25,7 +25,7 @@ export default function BrandLogos({ t }) {
                 href={brand.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-jost text-[13px] font-light tracking-[0.04em] transition-opacity"
+                className="font-playfair text-[20px] font-normal tracking-[0.02em] transition-opacity"
                 style={{ color: 'var(--muted-brown)', opacity: 0.5, textDecoration: 'none' }}
                 onMouseEnter={(e) => (e.currentTarget.style.opacity = 0.9)}
                 onMouseLeave={(e) => (e.currentTarget.style.opacity = 0.5)}
@@ -49,7 +49,7 @@ export default function BrandLogos({ t }) {
                   href={brand.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-jost text-[13px] font-light tracking-[0.04em]"
+                  className="font-playfair text-[20px] font-normal tracking-[0.02em]"
                   style={{ color: 'var(--muted-brown)', opacity: 0.5, textDecoration: 'none' }}
                 >
                   {brand.name}

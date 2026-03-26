@@ -1,7 +1,7 @@
 export default function BenefitsSection({ t }) {
   return (
     <section style={{ background: 'var(--charcoal)' }} className="py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="px-6 md:px-12">
         <div className="mb-12 md:mb-14">
           <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-3" style={{ color: 'var(--gold)' }}>
             {t.benefitsEyebrow}
@@ -19,7 +19,7 @@ export default function BenefitsSection({ t }) {
               </h3>
               <ul className="flex flex-col gap-3">
                 {group.items.map((item, j) => (
-                  <li key={j} className="flex gap-3 font-jost text-[13px] font-light leading-[1.75]" style={{ color: 'rgba(245,240,230,0.55)' }}>
+                  <li key={j} className="flex gap-3 font-jost text-[16px] font-light leading-[1.75]" style={{ color: 'rgba(245,240,230,0.55)' }}>
                     <span className="flex-shrink-0" style={{ color: 'var(--gold)' }}>—</span>
                     {item}
                   </li>

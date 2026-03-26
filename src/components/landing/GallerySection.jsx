@@ -64,14 +64,14 @@ export default function GallerySection({ t }) {
 
   return (
     <section id="galerija" style={{ background: 'var(--charcoal)' }} className="py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="px-6 md:px-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-12">
           <h2 className="font-playfair font-normal leading-[1.2]" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)', color: 'var(--white)', fontFamily: 'Georgia, serif' }}>
             {t.galleryHeading1}{' '}
             <em className="italic" style={{ color: 'var(--gold)' }}>{t.galleryHeadingEm}</em>
           </h2>
-          <p className="font-jost text-[14px] font-light leading-[1.8] max-w-[360px]" style={{ color: 'rgba(245,240,230,0.45)' }}>
+          <p className="font-jost text-[16px] font-light leading-[1.8] max-w-[360px]" style={{ color: 'rgba(245,240,230,0.45)' }}>
             {t.gallerySubtitle}
           </p>
         </div>

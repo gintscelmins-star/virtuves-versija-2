@@ -1,7 +1,7 @@
 export default function HeroSection({ heroImage, t }) {
   return (
     <section style={{ background: 'var(--ivory)' }}>
-      <div className="max-w-6xl mx-auto">
+      <div>
         <div className="grid grid-cols-1 md:grid-cols-12 min-h-[500px] md:min-h-[620px]">
           {/* Left Content */}
           <div className="md:col-span-6 flex flex-col justify-center px-5 md:px-10 py-12 md:py-16 order-2 md:order-1">
@@ -22,7 +22,7 @@ export default function HeroSection({ heroImage, t }) {
 
             {/* Body */}
             <p
-              className="font-jost font-light text-[15px] md:text-[16px] leading-[1.85] mb-8 max-w-[420px]"
+              className="font-jost font-light text-[17px] md:text-[18px] leading-[1.85] mb-8 max-w-[520px]"
               style={{ color: 'var(--muted-brown)' }}
             >
               {t.heroBody}

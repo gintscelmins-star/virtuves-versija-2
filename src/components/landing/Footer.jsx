@@ -1,7 +1,7 @@
 export default function Footer({ t }) {
   return (
     <footer style={{ background: 'var(--charcoal)' }} className="pb-16 md:pb-0">
-      <div className="max-w-6xl mx-auto px-5 py-12 md:py-16">
+      <div className="px-6 md:px-12 py-12 md:py-16">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           <div>
             <div className="font-playfair text-[16px] font-normal mb-2" style={{ color: 'var(--ivory)', fontFamily: 'Georgia, serif' }}>

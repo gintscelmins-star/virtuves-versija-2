@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { base44 } from '@/api/base44Client';
 
 export default function ContactForm({ t }) {
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', service_type: '', comment: '' });
@@ -11,7 +10,11 @@ export default function ContactForm({ t }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    await base44.entities.ContactSubmission.create({ ...formData, service_type: formData.service_type || serviceOptions[0] });
+    await fetch('https://formspree.io/f/mojkjwrp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...formData, service_type: formData.service_type || serviceOptions[0] }),
+    });
     setSubmitting(false);
     setSubmitted(true);
   };
@@ -26,7 +29,7 @@ export default function ContactForm({ t }) {
   if (submitted) {
     return (
       <section id="forma" style={{ background: 'var(--linen)' }} className="py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-5 text-center">
+        <div className="px-6 md:px-12 text-center">
           <div className="font-playfair text-[28px] font-normal mb-4" style={{ color: 'var(--charcoal)', fontFamily: 'Georgia, serif' }}>
             {t.contactThanks}
           </div>
@@ -40,7 +43,7 @@ export default function ContactForm({ t }) {
 
   return (
     <section id="forma" style={{ background: 'var(--linen)' }} className="py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           {/* Left: Info */}
           <div className="flex flex-col justify-center">
@@ -51,14 +54,14 @@ export default function ContactForm({ t }) {
               {t.contactHeading1}{' '}
               <em className="italic" style={{ color: 'var(--gold)' }}>{t.contactHeadingEm}</em>
             </h2>
-            <p className="font-jost text-[15px] font-light leading-[1.85] mb-8" style={{ color: 'var(--muted-brown)' }}>
+            <p className="font-jost text-[17px] font-light leading-[1.85] mb-8" style={{ color: 'var(--muted-brown)' }}>
               {t.contactBody}
             </p>
             <div className="flex flex-col gap-4">
               {t.contactReassurance.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="flex-shrink-0" style={{ width: 20, height: 1, background: 'var(--sage)', marginTop: 12 }} />
-                  <span className="font-jost text-[13px] font-light leading-[1.65]" style={{ color: 'var(--muted-brown)' }}>{item}</span>
+                  <span className="font-jost text-[16px] font-light leading-[1.65]" style={{ color: 'var(--muted-brown)' }}>{item}</span>
                 </div>
               ))}
             </div>

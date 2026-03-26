@@ -1,7 +1,7 @@
 export default function TestimonialsSection({ t }) {
   return (
     <section style={{ background: 'var(--linen)' }} className="py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="px-6 md:px-12">
         <div className="mb-12 md:mb-14">
           <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-3" style={{ color: 'var(--gold)' }}>
             {t.testimonialsEyebrow}
@@ -23,8 +23,8 @@ export default function TestimonialsSection({ t }) {
                   {te.initials}
                 </div>
                 <div>
-                  <div className="font-jost text-[13px] font-normal" style={{ color: 'var(--charcoal)' }}>{te.name}</div>
-                  <div className="font-jost text-[11px] font-light" style={{ color: 'var(--oak)' }}>{te.city} · {te.year}</div>
+                  <div className="font-jost text-[15px] font-normal" style={{ color: 'var(--charcoal)' }}>{te.name}</div>
+                  <div className="font-jost text-[13px] font-light" style={{ color: 'var(--oak)' }}>{te.city} · {te.year}</div>
                 </div>
               </div>
             </div>

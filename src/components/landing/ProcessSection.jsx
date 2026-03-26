@@ -1,7 +1,7 @@
 export default function ProcessSection({ t }) {
   return (
     <section id="process" style={{ background: 'var(--ivory)' }} className="py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="px-6 md:px-12">
         <div className="mb-12 md:mb-14">
           <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-3" style={{ color: 'var(--gold)' }}>
             {t.processEyebrow}
@@ -26,7 +26,7 @@ export default function ProcessSection({ t }) {
               <h3 className="font-playfair text-[17px] md:text-[18px] font-normal mb-3" style={{ color: 'var(--charcoal)', fontFamily: 'Georgia, serif' }}>
                 {step.title}
               </h3>
-              <p className="font-jost text-[13px] font-light leading-[1.75] mb-5" style={{ color: 'var(--muted-brown)' }}>
+              <p className="font-jost text-[16px] font-light leading-[1.75] mb-5" style={{ color: 'var(--muted-brown)' }}>
                 {step.body}
               </p>
               <span className="inline-block font-jost text-[9px] font-medium uppercase tracking-[0.14em] px-3 py-1.5"

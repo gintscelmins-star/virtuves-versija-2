@@ -1,7 +1,7 @@
 export default function StatsSection({ t }) {
   return (
     <section style={{ background: 'var(--linen)' }} className="py-16 md:py-20">
-      <div className="max-w-6xl mx-auto px-5">
+      <div className="px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
           {t.stats.map((stat, i) => (
             <div
@@ -17,7 +17,7 @@ export default function StatsSection({ t }) {
               <div className="font-jost text-[10px] font-medium uppercase tracking-[0.2em] mb-4" style={{ color: 'var(--gold)' }}>
                 {stat.title}
               </div>
-              <p className="font-jost text-[13px] font-light leading-[1.75] max-w-[280px] mx-auto" style={{ color: 'var(--muted-brown)' }}>
+              <p className="font-jost text-[16px] font-light leading-[1.75] max-w-[280px] mx-auto" style={{ color: 'var(--muted-brown)' }}>
                 {stat.story}
               </p>
             </div>
