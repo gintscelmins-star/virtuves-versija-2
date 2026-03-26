@@ -26,9 +26,9 @@ export default function BrandLogos({ t }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-playfair text-[20px] font-normal tracking-[0.02em] transition-opacity"
-                style={{ color: 'var(--muted-brown)', opacity: 0.5, textDecoration: 'none' }}
-                onMouseEnter={(e) => (e.currentTarget.style.opacity = 0.9)}
-                onMouseLeave={(e) => (e.currentTarget.style.opacity = 0.5)}
+                style={{ color: 'var(--charcoal)', opacity: 0.75, textDecoration: 'none' }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = '1')}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.75')}
               >
                 {brand.name}
               </a>
@@ -50,7 +50,7 @@ export default function BrandLogos({ t }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-playfair text-[20px] font-normal tracking-[0.02em]"
-                  style={{ color: 'var(--muted-brown)', opacity: 0.5, textDecoration: 'none' }}
+                  style={{ color: 'var(--charcoal)', opacity: 0.75, textDecoration: 'none' }}
                 >
                   {brand.name}
                 </a>

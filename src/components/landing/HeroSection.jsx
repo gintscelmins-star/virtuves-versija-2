@@ -45,6 +45,8 @@ export default function HeroSection({ heroImage, t }) {
             <img
               src={heroImage}
               alt="Premium iebūvējamā virtuve"
+              loading="eager"
+              fetchpriority="high"
               className="hero-zoom absolute inset-0 w-full h-full object-cover"
             />
             <div

@@ -45,12 +45,19 @@ export default function StickyHeader({ t, lang }) {
           {t.nav.map((item, i) => {
             const href = Object.values(navLinks)[i];
             const isExternal = href?.startsWith('http');
+            const isInternal = href && !href.startsWith('#') && !href.startsWith('http');
             return isExternal ? (
               <a key={item} href={href} target="_blank" rel="noopener noreferrer"
                 className="font-jost text-[11px] font-normal uppercase tracking-[0.14em] transition-colors hover:opacity-70"
                 style={{ color: 'var(--muted-brown)' }}>
                 {item}
               </a>
+            ) : isInternal ? (
+              <Link key={item} to={href}
+                className="font-jost text-[11px] font-normal uppercase tracking-[0.14em] transition-colors hover:opacity-70"
+                style={{ color: 'var(--muted-brown)' }}>
+                {item}
+              </Link>
             ) : (
               <a key={item} href={href}
                 className="font-jost text-[11px] font-normal uppercase tracking-[0.14em] transition-colors hover:opacity-70"
@@ -146,6 +153,7 @@ export default function StickyHeader({ t, lang }) {
           {t.nav.map((item, i) => {
             const href = Object.values(navLinks)[i] || '#forma';
             const isExternal = href?.startsWith('http');
+            const isInternal = href && !href.startsWith('#') && !href.startsWith('http');
             return isExternal ? (
               <a key={item} href={href} target="_blank" rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
@@ -153,6 +161,13 @@ export default function StickyHeader({ t, lang }) {
                 style={{ color: 'var(--muted-brown)', borderBottom: '1px solid rgba(138,112,85,0.08)' }}>
                 {item}
               </a>
+            ) : isInternal ? (
+              <Link key={item} to={href}
+                onClick={() => setMenuOpen(false)}
+                className="font-jost text-[15px] font-normal uppercase tracking-[0.1em] py-4"
+                style={{ color: 'var(--muted-brown)', borderBottom: '1px solid rgba(138,112,85,0.08)' }}>
+                {item}
+              </Link>
             ) : (
               <a key={item} href={href}
                 onClick={() => setMenuOpen(false)}
