@@ -1,6 +1,6 @@
 export default function BenefitsSection({ t }) {
   return (
-    <section style={{ background: 'var(--charcoal)' }} className="py-16 md:py-20">
+    <section id="ieguvumi" style={{ background: 'var(--charcoal)' }} className="py-16 md:py-20">
       <div className="px-6 md:px-12">
         <div className="mb-12 md:mb-14">
           <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-3" style={{ color: 'var(--gold)' }}>

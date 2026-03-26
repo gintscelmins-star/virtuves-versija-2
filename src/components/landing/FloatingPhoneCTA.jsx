@@ -9,9 +9,19 @@ export default function FloatingPhoneCTA({ t }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const mobileCtaText = {
+    lv: 'Saņemt projektu 24h laikā',
+    en: 'Get a project in 24h',
+    ru: 'Получить проект за 24ч',
+  };
+
+  // Detect lang from t object
+  const lang = t.headerCta?.includes('Get') ? 'en' : t.headerCta?.includes('Получить') ? 'ru' : 'lv';
+  const mobileText = mobileCtaText[lang];
+
   return (
     <>
-      {/* Desktop floating CTA */}
+      {/* Desktop floating pill CTA */}
       <a
         href="#forma"
         className="hidden md:flex fixed bottom-6 right-5 z-[400] items-center gap-2 px-6 py-3.5 transition-all duration-500"
@@ -29,22 +39,20 @@ export default function FloatingPhoneCTA({ t }) {
         <span style={{ color: 'var(--charcoal)', opacity: 0.7 }}>→</span>
       </a>
 
-      {/* Mobile sticky bottom CTA - always visible */}
+      {/* Mobile — always visible sticky bottom bar */}
       <div
-        className="md:hidden fixed bottom-0 left-0 right-0 z-[400] px-5 pb-6 pt-3"
-        style={{ background: 'linear-gradient(to top, rgba(245,240,230,0.98) 70%, transparent)' }}
+        className="md:hidden fixed bottom-0 left-0 right-0 z-[400]"
+        style={{ background: '#F5F0E6', borderTop: '1px solid rgba(138,112,85,0.15)', paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
       >
         <a
           href="#forma"
-          className="flex items-center justify-center gap-2 w-full py-4 transition-all active:scale-95"
+          className="flex items-center justify-center w-full py-4 transition-all active:opacity-80"
           style={{
             background: 'var(--gold)',
-            color: 'var(--charcoal)',
-            borderRadius: 999,
-            boxShadow: '0 4px 24px rgba(201,169,110,0.4)',
+            color: '#1A1714',
           }}
         >
-          <span className="font-jost text-[12px] font-medium uppercase tracking-[0.16em]">{t.headerCta}</span>
+          <span className="font-jost text-[12px] font-semibold uppercase tracking-[0.2em]">{mobileText}</span>
         </a>
       </div>
     </>

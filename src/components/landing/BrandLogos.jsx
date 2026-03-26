@@ -11,7 +11,7 @@ const brands = [
 
 export default function BrandLogos({ t }) {
   return (
-    <section style={{ background: 'var(--linen)' }}>
+    <section id="markas" style={{ background: 'var(--linen)' }}>
       <div className="px-6 md:px-12 py-6 md:py-7">
         {/* Desktop: static row */}
         <div className="hidden md:flex items-center gap-6">

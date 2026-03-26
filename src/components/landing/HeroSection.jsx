@@ -1,6 +1,6 @@
 export default function HeroSection({ heroImage, t }) {
   return (
-    <section style={{ background: 'var(--ivory)' }}>
+    <section id="hero" style={{ background: 'var(--ivory)' }}>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-12 min-h-[500px] md:min-h-[620px]">
           {/* Left Content */}

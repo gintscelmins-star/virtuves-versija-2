@@ -4,7 +4,7 @@ export default function FAQSection({ t }) {
   const [openIndex, setOpenIndex] = useState(-1);
 
   return (
-    <section style={{ background: 'var(--white)' }} className="py-16 md:py-20">
+    <section id="jautajumi" style={{ background: 'var(--white)' }} className="py-16 md:py-20">
       <div className="px-6 md:px-12 max-w-5xl mx-auto">
         <div className="mb-12 md:mb-14">
           <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-3" style={{ color: 'var(--gold)' }}>

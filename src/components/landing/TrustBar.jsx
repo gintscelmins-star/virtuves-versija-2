@@ -1,7 +1,7 @@
 export default function TrustBar({ t }) {
   const stats = t.trust;
   return (
-    <section style={{ background: 'var(--charcoal)' }} className="py-5 md:py-6">
+    <section id="uzticiba" style={{ background: 'var(--charcoal)' }} className="py-5 md:py-6">
       <div className="px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (

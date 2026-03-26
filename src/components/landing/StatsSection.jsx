@@ -1,6 +1,6 @@
 export default function StatsSection({ t }) {
   return (
-    <section style={{ background: 'var(--linen)' }} className="py-16 md:py-20">
+    <section id="statistika" style={{ background: 'var(--linen)' }} className="py-16 md:py-20">
       <div className="px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
           {t.stats.map((stat, i) => (
