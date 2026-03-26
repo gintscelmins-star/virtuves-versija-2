@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: 'Cormorant Garamond', Georgia, serif;
+    --font-jost: 'Inter', system-ui, sans-serif;
+
+    --background: 40 33% 96%;
+    --foreground: 30 12% 10%;
+    --card: 37 33% 98%;
+    --card-foreground: 30 12% 10%;
+    --popover: 37 33% 98%;
+    --popover-foreground: 30 12% 10%;
+    --primary: 36 40% 61%;
+    --primary-foreground: 30 12% 10%;
+    --secondary: 33 24% 90%;
+    --secondary-foreground: 30 12% 10%;
+    --muted: 33 24% 90%;
+    --muted-foreground: 25 10% 32%;
+    --accent: 33 24% 90%;
+    --accent-foreground: 30 12% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 36 40% 61%;
+    --chart-1: 36 40% 61%;
+    --chart-2: 120 19% 52%;
+    --chart-3: 30 28% 43%;
+    --chart-4: 36 60% 50%;
+    --chart-5: 207 23% 55%;
+    --radius: 0rem;
+
+    --ivory: #F5F0E6;
+    --linen: #EDE6DB;
+    --linen2: #E4DDD0;
+    --white: #FDFAF6;
+    --gold: #C9A96E;
+    --gold-lt: #E8D5B0;
+    --gold-dk: #8A6A38;
+    --oak: #8A7055;
+    --muted-brown: #5C5248;
+    --charcoal: #1A1714;
+    --sage: #6E8B6E;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 30 12% 10%;
+    --foreground: 40 33% 96%;
+    --card: 30 10% 12%;
+    --card-foreground: 40 33% 96%;
+    --popover: 30 10% 12%;
+    --popover-foreground: 40 33% 96%;
+    --primary: 36 40% 61%;
+    --primary-foreground: 30 12% 10%;
+    --secondary: 30 5% 15%;
+    --secondary-foreground: 40 33% 96%;
+    --muted: 30 5% 15%;
+    --muted-foreground: 30 10% 55%;
+    --accent: 30 5% 15%;
+    --accent-foreground: 40 33% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 5% 18%;
+    --input: 30 5% 18%;
+    --ring: 36 40% 61%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-jost);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero zoom animation */
+@keyframes heroZoom {
+  0% { transform: scale(1.06); }
+  100% { transform: scale(1.00); }
+}
+
+.hero-zoom {
+  animation: heroZoom 10s ease-out forwards;
+}
+
+/* Brand marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 20s linear infinite;
+}
+
+/* FAQ transition */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+.faq-answer.open {
+  max-height: 400px;
+}
+
+/* Floating CTA pulse */
+@keyframes subtlePulse {
+  0%, 100% { box-shadow: 0 -2px 20px rgba(201,169,110,0.15); }
+  50% { box-shadow: 0 -2px 30px rgba(201,169,110,0.25); }
+}
