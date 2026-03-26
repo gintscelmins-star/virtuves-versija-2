@@ -136,6 +136,20 @@ export const translations = {
     contactThanksBody: 'Mēs sazināsimies ar jums drīzumā. Bez saistībām — jūs izlemjat, vai turpinām.',
     serviceOptions: ['Ar dizainera vizīti', 'Man jau ir projekts', 'Vēlos konsultāciju'],
 
+    // Audience Sections
+    audPrivateEyebrow: 'Privātmājām',
+    audPrivateHeading: 'Telpa un gaisma bez kompromisiem',
+    audPrivateBody: 'Neatlaidīgs mērogs. Iebūvēta tehnika un masīvas virsmas, kas radītas intensīvai kulinārijas lietošanai un augstākā līmeņa reprezentācijai.',
+    audPrivateCta: 'Pieteikties projektam',
+    audNewDevEyebrow: 'Jaunajiem projektiem',
+    audNewDevHeading: 'Nevainojama pāreja uz dzīvojamo zonu',
+    audNewDevBody: 'Tīras līnijas, inteliģenti integrēts apgaismojums un arhitektonisks minimālisms — radīts, lai papildinātu mūsdienu jauno projektu precīzo ģeometriju.',
+    audNewDevCta: 'Pieteikties projektam',
+    audCompactEyebrow: 'Kompaktais lukss',
+    audCompactHeading: 'Ekskluzīvs nenozīmē masīvs',
+    audCompactBody: 'Tas nozīmē milimetra precizitāti. Gudri uzglabāšanas risinājumi un premium mehānismi, kas ierobežotu telpu pārvērš augstas klases darba vietā. Mazāks materiālu apjoms — nekompromitēts standarts.',
+    audCompactCta: 'Pieteikties projektam',
+
     // Footer
     footerTagline: 'Jūsu virtuve, jūsu noteikumi · Kopš 1999',
     footerLinks: ['Projekti', 'Iedvesma', 'Par mums', 'Sadarbība', 'Kontakti'],
@@ -286,6 +300,20 @@ export const translations = {
 
     phoneCta: 'Call — free consultation',
 
+    // Audience Sections
+    audPrivateEyebrow: 'For Private Houses',
+    audPrivateHeading: 'The fusion of space and light',
+    audPrivateBody: 'Uncompromising scale. Integrated appliances and massive surfaces engineered for heavy culinary use and high-end representation.',
+    audPrivateCta: 'Start a project',
+    audNewDevEyebrow: 'New Developments',
+    audNewDevHeading: 'The invisible transition into living',
+    audNewDevBody: 'Clean lines, intelligently integrated lighting, and architectural minimalism designed to complement the precise geometry of modern new developments.',
+    audNewDevCta: 'Start a project',
+    audCompactEyebrow: 'Compact Luxury',
+    audCompactHeading: 'Exclusive does not mean massive',
+    audCompactBody: 'It means millimeter precision. Smart storage solutions and premium mechanisms that transform limited space into a high-end workstation. Lower material volume, uncompromised Elite standard.',
+    audCompactCta: 'Start a project',
+
     benefitsEyebrow: 'What you receive',
     benefitsHeading1: 'You choose.',
     benefitsHeadingEm: 'We deliver.',
@@ -425,6 +453,20 @@ export const translations = {
     footerPrivacy: 'Политика конфиденциальности',
 
     phoneCta: 'Позвонить — бесплатная консультация',
+
+    // Audience Sections
+    audPrivateEyebrow: 'Для частных домов',
+    audPrivateHeading: 'Слияние пространства и света',
+    audPrivateBody: 'Бескомпромиссный масштаб. Встроенная техника и массивные поверхности, созданные для интенсивного кулинарного использования и представительства высшего уровня.',
+    audPrivateCta: 'Начать проект',
+    audNewDevEyebrow: 'Новые проекты',
+    audNewDevHeading: 'Незаметный переход в жилую зону',
+    audNewDevBody: 'Чистые линии, интеллектуально интегрированное освещение и архитектурный минимализм — созданные, чтобы дополнить точную геометрию современных новостроек.',
+    audNewDevCta: 'Начать проект',
+    audCompactEyebrow: 'Компактная роскошь',
+    audCompactHeading: 'Эксклюзивный — не значит массивный',
+    audCompactBody: 'Это означает точность до миллиметра. Умные решения для хранения и механизмы премиум-класса, превращающие ограниченное пространство в рабочее место высшего уровня. Меньший объём материалов — неизменный стандарт Elite.',
+    audCompactCta: 'Начать проект',
 
     benefitsEyebrow: 'Что вы получаете',
     benefitsHeading1: 'Вы выбираете.',

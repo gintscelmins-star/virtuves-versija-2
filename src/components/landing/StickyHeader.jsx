@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -12,10 +12,19 @@ export default function StickyHeader({ t, lang }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   const navHrefs = {
-    lv: { Projekti: '#galerija', Iedvesma: 'https://iebuvejamasvirtuves.lv/index.php/dizaini-iedvesmai/', 'Par mums': '#par-mums', Tehnika: '#tehnika', Sadarbība: '#process' },
-    en: { Projects: '#galerija', Inspiration: 'https://iebuvejamasvirtuves.lv/index.php/dizaini-iedvesmai/', 'About Us': '#par-mums', Appliances: '#tehnika', Cooperation: '#process' },
-    ru: { Проекты: '#galerija', Вдохновение: 'https://iebuvejamasvirtuves.lv/index.php/dizaini-iedvesmai/', 'О нас': '#par-mums', Техника: '#tehnika', Сотрудничество: '#process' },
+    lv: { Projekti: '#galerija', Iedvesma: '/iedvesma', 'Par mums': '#par-mums', Tehnika: '#tehnika', Sadarbība: '#process' },
+    en: { Projects: '#galerija', Inspiration: '/iedvesma', 'About Us': '#par-mums', Appliances: '#tehnika', Cooperation: '#process' },
+    ru: { Проекты: '#galerija', Вдохновение: '/iedvesma', 'О нас': '#par-mums', Техника: '#tehnika', Сотрудничество: '#process' },
   };
   const navLinks = navHrefs[lang] || navHrefs.lv;
 
@@ -101,33 +110,69 @@ export default function StickyHeader({ t, lang }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="md:hidden border-t px-5 py-6 flex flex-col gap-5" style={{ background: 'var(--ivory)', borderColor: 'rgba(138,112,85,0.12)' }}>
+        <div
+          className="fixed inset-0 z-40 md:hidden"
+          style={{ background: 'rgba(26,23,20,0.5)', backdropFilter: 'blur(4px)' }}
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu Drawer */}
+      <div
+        className="md:hidden fixed top-0 right-0 z-50 h-full w-[80vw] max-w-[320px] flex flex-col"
+        style={{
+          background: 'var(--ivory)',
+          transform: menuOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.35s cubic-bezier(0.4,0,0.2,1)',
+          boxShadow: menuOpen ? '-8px 0 40px rgba(26,23,20,0.2)' : 'none',
+        }}
+      >
+        {/* Drawer Header */}
+        <div className="flex items-center justify-between px-6 py-5" style={{ borderBottom: '1px solid rgba(138,112,85,0.12)' }}>
+          <span className="font-playfair text-[15px]" style={{ color: 'var(--charcoal)', fontFamily: 'Georgia, serif' }}>Izvēlne</span>
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="flex items-center justify-center w-9 h-9"
+            style={{ color: 'var(--charcoal)' }}
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        {/* Nav Links */}
+        <nav className="flex flex-col px-6 py-6 gap-1 flex-1">
           {t.nav.map((item, i) => {
             const href = Object.values(navLinks)[i] || '#forma';
             const isExternal = href?.startsWith('http');
             return isExternal ? (
-              <a key={item} href={href} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}
-                className="font-jost text-[13px] font-normal uppercase tracking-[0.12em]"
-                style={{ color: 'var(--muted-brown)' }}>
+              <a key={item} href={href} target="_blank" rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="font-jost text-[15px] font-normal uppercase tracking-[0.1em] py-4"
+                style={{ color: 'var(--muted-brown)', borderBottom: '1px solid rgba(138,112,85,0.08)' }}>
                 {item}
               </a>
             ) : (
-              <a key={item} href={href} onClick={() => setMenuOpen(false)}
-                className="font-jost text-[13px] font-normal uppercase tracking-[0.12em]"
-                style={{ color: 'var(--muted-brown)' }}>
+              <a key={item} href={href}
+                onClick={() => setMenuOpen(false)}
+                className="font-jost text-[15px] font-normal uppercase tracking-[0.1em] py-4"
+                style={{ color: 'var(--muted-brown)', borderBottom: '1px solid rgba(138,112,85,0.08)' }}>
                 {item}
               </a>
             );
           })}
+        </nav>
+
+        {/* CTA */}
+        <div className="px-6 pb-8">
           <a href="#forma" onClick={() => setMenuOpen(false)}
-            className="mt-2 flex items-center justify-center py-3.5 font-jost text-[12px] font-medium uppercase tracking-[0.18em]"
+            className="flex items-center justify-center py-4 font-jost text-[13px] font-medium uppercase tracking-[0.18em]"
             style={{ background: 'var(--charcoal)', color: 'var(--ivory)' }}>
             {t.mobileMenuCta}
           </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }

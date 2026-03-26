@@ -13,6 +13,7 @@ import ContactForm from './ContactForm';
 import Footer from './Footer';
 import FloatingPhoneCTA from './FloatingPhoneCTA';
 import AboutSection from './AboutSection';
+import AudienceSections from './AudienceSections';
 import AppliancesSection from './AppliancesSection';
 
 const HERO_IMAGE = 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/06d26d805_generated_1c0578e3.png';
@@ -28,6 +29,7 @@ export default function LandingPageLayout({ t, lang }) {
       <GallerySection t={t} />
       <StatsSection t={t} />
       <AboutSection t={t} />
+      <AudienceSections t={t} />
       <BenefitsSection t={t} />
       <AppliancesSection t={t} />
       <ProcessSection t={t} />

@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import LandingPageEN from './pages/LandingPageEN';
 import LandingPageRU from './pages/LandingPageRU';
 import AdminGallery from './pages/AdminGallery';
+import Inspiration from './pages/Inspiration';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 // Add page imports here
@@ -41,6 +42,7 @@ const AuthenticatedApp = () => {
       <Route path="/en" element={<LandingPageEN />} />
       <Route path="/ru" element={<LandingPageRU />} />
       <Route path="/admin/gallery" element={<AdminGallery />} />
+      <Route path="/iedvesma" element={<Inspiration />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
