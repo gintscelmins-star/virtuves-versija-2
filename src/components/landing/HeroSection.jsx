@@ -35,7 +35,7 @@ export default function HeroSection({ heroImage, t }) {
                 className="inline-flex items-center gap-3 px-8 py-4 font-jost text-[12px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-90"
                 style={{ background: 'var(--charcoal)', color: 'var(--ivory)' }}
               >
-                {t.heroCta} →
+                {t.heroCta}
               </a>
             </div>
           </div>

@@ -10,16 +10,18 @@ export default function FloatingPhoneCTA({ t }) {
   }, []);
 
   const mobileCtaText = {
-    lv: 'Saņemt bezmaksas projektu',
-    en: 'Get a free project',
-    ru: 'Получить бесплатный проект',
+    lv: 'Saņemt piedāvājumu 24h',
+    en: 'Get a quote in 24h',
+    ru: 'Получить предложение за 24ч',
   };
 
   const desktopCtaText = {
-    lv: 'Saņemt bezmaksas projektu →',
-    en: 'Get a free project →',
-    ru: 'Получить бесплатный проект →',
+    lv: 'Saņemt piedāvājumu →',
+    en: 'Get a quote →',
+    ru: 'Получить предложение →',
   };
+
+
 
   // Detect lang from t object
   const lang = t.headerCta?.includes('Get') ? 'en' : t.headerCta?.includes('Получить') ? 'ru' : 'lv';

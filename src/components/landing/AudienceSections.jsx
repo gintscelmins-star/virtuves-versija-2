@@ -118,7 +118,7 @@ export default function AudienceSections({ t }) {
               className="self-start inline-flex items-center gap-3 px-7 py-3.5 font-jost text-[11px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-85"
               style={{ background: 'var(--gold)', color: 'var(--charcoal)' }}
             >
-              Pieteikties projektam →
+              {t.wardrobesCta || 'Sakārtot savu mājokli gudri →'}
             </a>
           </div>
         </div>

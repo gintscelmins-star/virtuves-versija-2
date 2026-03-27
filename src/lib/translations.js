@@ -4,7 +4,7 @@ export const translations = {
     nav: ['Projekti', 'Iedvesma', 'Par mums', 'Tehnika', 'Sadarbība'],
     navMobile: ['Projekti', 'Iedvesma', 'Par mums', 'Sadarbība', 'Kontakti'],
     headerCta: 'Saņemt projektu →',
-    mobileMenuCta: 'Saņemt savas sapņu virtuves bezmaksas projektu →',
+    mobileMenuCta: 'Saņemt virtuves piedāvājumu →',
 
     // Hero
     eyebrow: 'Individuāli projekti · Rīga ✦',
@@ -13,7 +13,7 @@ export const translations = {
     heroTitleEm: 'Pārliecināta elegance.',
     heroTitleSub: 'Virtuve jūsu sirds ritmā.',
     heroBody: 'Jūsu virtuve — jūsu dzīves ritma sala. Dzīves stila un gaumes bezkompromisa apliecinājums.',
-    heroCta: 'Saņemt savas sapņu virtuves bezmaksas projektu',
+    heroCta: 'Saņemt virtuves piedāvājumu 24h laikā →',
 
     // TrustBar
     trust: [
@@ -50,7 +50,7 @@ export const translations = {
     galleryHeadingEm: 'katrs unikāls',
     gallerySubtitle: 'Virtuves, kas tika radītas personībām un videi. Katra unikāla.',
     galleryCtaLabel: 'Varbūt nākamā ir jūsējā?',
-    galleryCtaLink: 'Skatīt visus projektus →',
+    galleryCtaLink: 'Gribu līdzīgu virtuvi →',
     galleryProjects: [
       'Rīga · Minimālistiskā',
       'Ekskluzīvs · Tehnoloģisks',
@@ -129,9 +129,10 @@ export const translations = {
     contactLabelService: 'Ko vēlaties sākt?',
     contactLabelComment: 'Komentārs vai sapnis',
     contactCommentPlaceholder: 'Pāris vārdi par to, ko gribat...',
-    contactSubmit: 'Nosūtīt pieteikumu →',
+    contactSubmit: 'Saņemt savu virtuves piedāvājumu',
+
     contactSubmitting: 'Nosūta...',
-    contactFinePrint: 'Sazināsimies 24h laikā. Bez saistībām — jūs izlemjat, vai turpinām.',
+    contactFinePrint: 'Atbildēsim 24h laikā · Bez saistībām · Individuāls risinājums',
     contactThanks: 'Paldies!',
     contactThanksBody: 'Mēs sazināsimies ar jums drīzumā. Bez saistībām — jūs izlemjat, vai turpinām.',
     serviceOptions: ['Ar dizainera vizīti', 'Man jau ir projekts', 'Vēlos konsultāciju'],
@@ -140,15 +141,16 @@ export const translations = {
     audPrivateEyebrow: 'Privātmājām',
     audPrivateHeading: 'Telpa un gaisma bez kompromisiem',
     audPrivateBody: 'Neatlaidīgs mērogs. Iebūvēta tehnika un masīvas virsmas, kas radītas intensīvai kulinārijas lietošanai un augstākā līmeņa reprezentācijai.',
-    audPrivateCta: 'Pieteikties projektam',
+    audPrivateCta: 'Izveidot savu virtuvi →',
     audNewDevEyebrow: 'Jaunajiem projektiem',
     audNewDevHeading: 'Nevainojama pāreja uz dzīvojamo zonu',
     audNewDevBody: 'Tīras līnijas, inteliģenti integrēts apgaismojums un arhitektonisks minimālisms — radīts, lai papildinātu mūsdienu jauno projektu precīzo ģeometriju.',
-    audNewDevCta: 'Pieteikties projektam',
+    audNewDevCta: 'Pielāgot virtuvi savam dzīvoklim →',
     audCompactEyebrow: 'Kompaktais lukss',
     audCompactHeading: 'Ekskluzīvs nenozīmē masīvs',
     audCompactBody: 'Tas nozīmē milimetra precizitāti. Gudri uzglabāšanas risinājumi un premium mehānismi, kas ierobežotu telpu pārvērš augstas klases darba vietā. Mazāks materiālu apjoms — nekompromitēts standarts.',
-    audCompactCta: 'Pieteikties projektam',
+    audCompactCta: 'Atrast risinājumu savai telpai →',
+    wardrobesCta: 'Sakārtot savu mājokli gudri →',
 
     // Footer
     footerTagline: 'Jūsu virtuve, jūsu noteikumi · Kopš 1999',
@@ -187,7 +189,7 @@ export const translations = {
     nav: ['Projects', 'Inspiration', 'About Us', 'Appliances', 'Cooperation'],
     navMobile: ['Projects', 'Inspiration', 'About Us', 'Cooperation', 'Contacts'],
     headerCta: 'Get a project →',
-    mobileMenuCta: 'Get your dream kitchen project for free →',
+    mobileMenuCta: 'Get a kitchen quote →',
 
     eyebrow: 'Individual projects · Riga',
     heroSubtitle: 'Confident elegance',
@@ -195,7 +197,7 @@ export const translations = {
     heroTitleEm: 'your rhythm.',
     heroTitleSub: 'Individual projects.',
     heroBody: 'Your kitchen — the sanctuary of your lifestyle. An uncompromising statement of taste and living.',
-    heroCta: 'Get your dream kitchen project for free',
+    heroCta: 'Get a kitchen quote within 24h →',
 
     trust: [
       { v: '984', l: 'Projects Completed' },
@@ -219,7 +221,7 @@ export const translations = {
     galleryHeadingEm: 'each unique',
     gallerySubtitle: 'Kitchens created for personalities and environments. Each one unique.',
     galleryCtaLabel: 'Perhaps the next one is yours?',
-    galleryCtaLink: 'View all projects →',
+    galleryCtaLink: 'I want a similar kitchen →',
     galleryProjects: ['Riga · Minimalist', 'Exclusive · Technological', 'Riga · Dark Oak Veneer', 'Valmiera · Compact Studio'],
 
     stats: [
@@ -286,9 +288,9 @@ export const translations = {
     contactLabelService: 'How would you like to start?',
     contactLabelComment: 'Comment or dream',
     contactCommentPlaceholder: 'A few words about what you want...',
-    contactSubmit: 'Send enquiry →',
+    contactSubmit: 'Get my kitchen quote',
     contactSubmitting: 'Sending...',
-    contactFinePrint: 'We will be in touch within 24h. No commitment — you decide whether to continue.',
+    contactFinePrint: "We'll reply within 24h · No commitment · Individual solution",
     contactThanks: 'Thank you!',
     contactThanksBody: 'We will be in touch with you shortly. No commitment — you decide whether to continue.',
     serviceOptions: ['With a designer visit', 'I already have a project', 'I want a consultation'],
@@ -304,15 +306,16 @@ export const translations = {
     audPrivateEyebrow: 'For Private Houses',
     audPrivateHeading: 'The fusion of space and light',
     audPrivateBody: 'Uncompromising scale. Integrated appliances and massive surfaces engineered for heavy culinary use and high-end representation.',
-    audPrivateCta: 'Start a project',
+    audPrivateCta: 'Create my kitchen →',
     audNewDevEyebrow: 'New Developments',
     audNewDevHeading: 'The invisible transition into living',
     audNewDevBody: 'Clean lines, intelligently integrated lighting, and architectural minimalism designed to complement the precise geometry of modern new developments.',
-    audNewDevCta: 'Start a project',
+    audNewDevCta: 'Tailor the kitchen to my apartment →',
     audCompactEyebrow: 'Compact Luxury',
     audCompactHeading: 'Exclusive does not mean massive',
     audCompactBody: 'It means millimeter precision. Smart storage solutions and premium mechanisms that transform limited space into a high-end workstation. Lower material volume, uncompromised Elite standard.',
-    audCompactCta: 'Start a project',
+    audCompactCta: 'Find a solution for my space →',
+    wardrobesCta: 'Organise your home smartly →',
 
     benefitsEyebrow: 'What you receive',
     benefitsHeading1: 'You choose.',
@@ -341,7 +344,7 @@ export const translations = {
     nav: ['Проекты', 'Вдохновение', 'О нас', 'Техника', 'Сотрудничество'],
     navMobile: ['Проекты', 'Вдохновение', 'О нас', 'Сотрудничество', 'Контакты'],
     headerCta: 'Получить проект →',
-    mobileMenuCta: 'Получить бесплатный проект кухни мечты →',
+    mobileMenuCta: 'Получить предложение по кухне →',
 
     eyebrow: 'Индивидуальные проекты · Рига',
     heroSubtitle: 'Уверенная элегантность',
@@ -349,7 +352,7 @@ export const translations = {
     heroTitleEm: 'вашей жизни.',
     heroTitleSub: 'Индивидуальные проекты.',
     heroBody: 'Ваша кухня — оазис вашего образа жизни. Бескомпромиссное воплощение вкуса и стиля.',
-    heroCta: 'Получить бесплатный проект кухни мечты',
+    heroCta: 'Получить предложение по кухне за 24ч →',
 
     trust: [
       { v: '984', l: 'Реализованных проектов' },
@@ -373,7 +376,7 @@ export const translations = {
     galleryHeadingEm: 'каждый уникален',
     gallerySubtitle: 'Кухни, созданные для личностей и пространств. Каждая уникальна.',
     galleryCtaLabel: 'Возможно, следующая — ваша?',
-    galleryCtaLink: 'Смотреть все проекты →',
+    galleryCtaLink: 'Хочу похожую кухню →',
     galleryProjects: ['Рига · Минималистичная', 'Эксклюзивная · Технологичная', 'Рига · Тёмный дуб', 'Валмиера · Компактная студия'],
 
     stats: [
@@ -440,9 +443,9 @@ export const translations = {
     contactLabelService: 'Как хотите начать?',
     contactLabelComment: 'Комментарий или мечта',
     contactCommentPlaceholder: 'Несколько слов о том, чего вы хотите...',
-    contactSubmit: 'Отправить заявку →',
+    contactSubmit: 'Получить предложение по кухне',
     contactSubmitting: 'Отправляем...',
-    contactFinePrint: 'Свяжемся в течение 24ч. Без обязательств — вы решаете, продолжать ли.',
+    contactFinePrint: 'Ответим за 24ч · Без обязательств · Индивидуальное решение',
     contactThanks: 'Спасибо!',
     contactThanksBody: 'Мы свяжемся с вами в ближайшее время. Без обязательств — вы решаете, продолжать ли.',
     serviceOptions: ['С визитом дизайнера', 'У меня уже есть проект', 'Хочу консультацию'],
@@ -458,15 +461,16 @@ export const translations = {
     audPrivateEyebrow: 'Для частных домов',
     audPrivateHeading: 'Слияние пространства и света',
     audPrivateBody: 'Бескомпромиссный масштаб. Встроенная техника и массивные поверхности, созданные для интенсивного кулинарного использования и представительства высшего уровня.',
-    audPrivateCta: 'Начать проект',
+    audPrivateCta: 'Создать свою кухню →',
     audNewDevEyebrow: 'Новые проекты',
     audNewDevHeading: 'Незаметный переход в жилую зону',
     audNewDevBody: 'Чистые линии, интеллектуально интегрированное освещение и архитектурный минимализм — созданные, чтобы дополнить точную геометрию современных новостроек.',
-    audNewDevCta: 'Начать проект',
+    audNewDevCta: 'Подобрать кухню под квартиру →',
     audCompactEyebrow: 'Компактная роскошь',
     audCompactHeading: 'Эксклюзивный — не значит массивный',
     audCompactBody: 'Это означает точность до миллиметра. Умные решения для хранения и механизмы премиум-класса, превращающие ограниченное пространство в рабочее место высшего уровня. Меньший объём материалов — неизменный стандарт Elite.',
-    audCompactCta: 'Начать проект',
+    audCompactCta: 'Найти решение для своего помещения →',
+    wardrobesCta: 'Упорядочить своё жильё грамотно →',
 
     benefitsEyebrow: 'Что вы получаете',
     benefitsHeading1: 'Вы выбираете.',
