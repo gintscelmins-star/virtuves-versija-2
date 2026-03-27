@@ -89,6 +89,9 @@ export default function AppliancesSection({ t }) {
                   <img
                     src={a.image}
                     alt={a.name}
+                    loading="lazy"
+                    width="600"
+                    height="450"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />

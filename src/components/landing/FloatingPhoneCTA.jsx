@@ -10,14 +10,21 @@ export default function FloatingPhoneCTA({ t }) {
   }, []);
 
   const mobileCtaText = {
-    lv: 'Saņemt projektu 24h laikā',
-    en: 'Get a project in 24h',
-    ru: 'Получить проект за 24ч',
+    lv: 'Saņemt bezmaksas projektu',
+    en: 'Get a free project',
+    ru: 'Получить бесплатный проект',
+  };
+
+  const desktopCtaText = {
+    lv: 'Saņemt bezmaksas projektu →',
+    en: 'Get a free project →',
+    ru: 'Получить бесплатный проект →',
   };
 
   // Detect lang from t object
   const lang = t.headerCta?.includes('Get') ? 'en' : t.headerCta?.includes('Получить') ? 'ru' : 'lv';
   const mobileText = mobileCtaText[lang];
+  const desktopText = desktopCtaText[lang];
 
   return (
     <>
@@ -35,8 +42,7 @@ export default function FloatingPhoneCTA({ t }) {
           boxShadow: '0 8px 32px rgba(201,169,110,0.45), 0 0 0 1px rgba(201,169,110,0.5)',
         }}
       >
-        <span className="font-jost text-[11px] font-medium uppercase tracking-[0.16em]">{t.headerCta}</span>
-        <span style={{ color: 'var(--charcoal)', opacity: 0.7 }}>→</span>
+        <span className="font-jost text-[11px] font-medium uppercase tracking-[0.16em]">{desktopText}</span>
       </a>
 
       {/* Mobile — always visible sticky bottom bar */}
