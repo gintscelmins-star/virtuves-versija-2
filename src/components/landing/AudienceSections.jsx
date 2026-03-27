@@ -70,10 +70,10 @@ export default function AudienceSections({ t }) {
               {/* Images */}
               <div className="grid grid-cols-2 gap-2">
                 <div className="overflow-hidden" style={{ aspectRatio: '2/3' }}>
-                  <img src={s.images[0]} alt={s.heading} loading="lazy" width="467" height="700" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src={s.images[0]} alt={s.heading} loading="lazy" decoding="async" width="467" height="700" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
                 </div>
                 <div className="overflow-hidden mt-8" style={{ aspectRatio: '2/3' }}>
-                  <img src={s.images[1]} alt={s.eyebrow} loading="lazy" width="467" height="700" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                  <img src={s.images[1]} alt={s.eyebrow} loading="lazy" decoding="async" width="467" height="700" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
                 </div>
               </div>
             </div>

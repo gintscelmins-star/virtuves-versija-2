@@ -90,6 +90,7 @@ export default function AppliancesSection({ t }) {
                     src={a.image}
                     alt={a.name}
                     loading="lazy"
+                    decoding="async"
                     width="600"
                     height="450"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

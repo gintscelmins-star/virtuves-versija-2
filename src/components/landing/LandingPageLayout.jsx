@@ -27,15 +27,15 @@ export default function LandingPageLayout({ t, lang }) {
       <BrandLogos t={t} />
       <ValueProps t={t} />
       <GallerySection t={t} />
-      <StatsSection t={t} />
-      <AboutSection t={t} />
-      <AudienceSections t={t} />
-      <BenefitsSection t={t} />
-      <AppliancesSection t={t} />
-      <ProcessSection t={t} />
-      <TestimonialsSection t={t} />
-      <FAQSection t={t} />
-      <ContactForm t={t} />
+      <div className="below-fold"><StatsSection t={t} /></div>
+      <div className="below-fold"><AboutSection t={t} /></div>
+      <div className="below-fold"><AudienceSections t={t} /></div>
+      <div className="below-fold"><BenefitsSection t={t} /></div>
+      <div className="below-fold"><AppliancesSection t={t} /></div>
+      <div className="below-fold"><ProcessSection t={t} /></div>
+      <div className="below-fold"><TestimonialsSection t={t} /></div>
+      <div className="below-fold"><FAQSection t={t} /></div>
+      <div className="below-fold"><ContactForm t={t} /></div>
       <Footer t={t} />
       <FloatingPhoneCTA t={t} />
     </div>

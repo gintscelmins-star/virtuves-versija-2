@@ -47,6 +47,9 @@ export default function HeroSection({ heroImage, t }) {
               alt="Premium iebūvējamā virtuve"
               loading="eager"
               fetchpriority="high"
+              decoding="sync"
+              width="800"
+              height="620"
               className="hero-zoom absolute inset-0 w-full h-full object-cover"
             />
             <div

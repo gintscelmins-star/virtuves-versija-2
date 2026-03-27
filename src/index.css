@@ -136,6 +136,12 @@ html {
   max-height: 400px;
 }
 
+/* Below-fold rendering optimization */
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
 /* Floating CTA pulse */
 @keyframes subtlePulse {
   0%, 100% { box-shadow: 0 -2px 20px rgba(201,169,110,0.15); }
