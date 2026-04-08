@@ -84,7 +84,6 @@ export default function AppliancesSection({ t }) {
                 className="group block p-0 overflow-hidden transition-all"
                 style={{ background: 'var(--white)', textDecoration: 'none' }}
               >
-                {/* Image */}
                 <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
                   <img
                     src={a.image}
@@ -93,11 +92,11 @@ export default function AppliancesSection({ t }) {
                     decoding="async"
                     width="600"
                     height="450"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                 </div>
-                {/* Content */}
                 <div className="p-5 md:p-6">
                   <div className="font-jost text-[9px] font-normal uppercase tracking-[0.2em] mb-1.5" style={{ color: 'var(--gold)' }}>
                     {a.category}
@@ -124,7 +123,6 @@ export default function AppliancesSection({ t }) {
   );
 }
 
-// Helper to detect language key from translation object
 function getLang(t) {
   if (t.appliancesEyebrow === 'Appliances for our kitchens') return 'en';
   if (t.appliancesEyebrow === 'Техника для наших кухонь') return 'ru';
