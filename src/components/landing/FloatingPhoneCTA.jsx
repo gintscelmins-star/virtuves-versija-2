@@ -21,9 +21,6 @@ export default function FloatingPhoneCTA({ t }) {
     ru: 'Получить предложение →',
   };
 
-
-
-  // Detect lang from t object
   const lang = t.headerCta?.includes('Get') ? 'en' : t.headerCta?.includes('Получить') ? 'ru' : 'lv';
   const mobileText = mobileCtaText[lang];
   const desktopText = desktopCtaText[lang];
@@ -54,10 +51,11 @@ export default function FloatingPhoneCTA({ t }) {
       >
         <a
           href="#forma"
-          className="flex items-center justify-center w-full py-4 transition-all active:opacity-80"
+          className="flex items-center justify-center w-full transition-all active:opacity-80"
           style={{
             background: 'var(--gold)',
             color: '#1A1714',
+            minHeight: 56,
           }}
         >
           <span className="font-jost text-[12px] font-semibold uppercase tracking-[0.2em]">{mobileText}</span>

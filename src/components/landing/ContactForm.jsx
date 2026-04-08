@@ -7,6 +7,13 @@ export default function ContactForm({ t }) {
 
   const serviceOptions = t.serviceOptions;
 
+  const fireFormStart = () => {
+    if (formData.name === '' && formData.phone === '' && formData.email === '') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'form_start', form_type: 'contact_request' });
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
@@ -16,7 +23,6 @@ export default function ContactForm({ t }) {
       body: JSON.stringify({ ...formData, service_type: formData.service_type || serviceOptions[0] }),
     });
 
-    // GA4 / GTM konversijas notikums
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'form_submit',
@@ -86,10 +92,10 @@ export default function ContactForm({ t }) {
                   </label>
                   <input type="text" required value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full font-jost text-[14px] px-4 py-3.5 outline-none transition-colors"
-                    style={inputStyle}
-                    onFocus={(e) => (e.target.style.borderColor = 'var(--gold)')}
+                    onFocus={(e) => { fireFormStart(); e.target.style.borderColor = 'var(--gold)'; }}
                     onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
+                    className="w-full font-jost text-[14px] font-normal px-4 py-3.5 outline-none transition-colors"
+                    style={inputStyle}
                   />
                 </div>
                 <div>
@@ -98,10 +104,10 @@ export default function ContactForm({ t }) {
                   </label>
                   <input type="tel" required value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full font-jost text-[14px] px-4 py-3.5 outline-none transition-colors"
-                    style={inputStyle}
-                    onFocus={(e) => (e.target.style.borderColor = 'var(--gold)')}
+                    onFocus={(e) => { fireFormStart(); e.target.style.borderColor = 'var(--gold)'; }}
                     onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
+                    className="w-full font-jost text-[14px] font-normal px-4 py-3.5 outline-none transition-colors"
+                    style={inputStyle}
                   />
                 </div>
               </div>
@@ -112,10 +118,10 @@ export default function ContactForm({ t }) {
                 </label>
                 <input type="email" required value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full font-jost text-[14px] px-4 py-3.5 outline-none transition-colors"
-                  style={inputStyle}
-                  onFocus={(e) => (e.target.style.borderColor = 'var(--gold)')}
+                  onFocus={(e) => { fireFormStart(); e.target.style.borderColor = 'var(--gold)'; }}
                   onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
+                  className="w-full font-jost text-[14px] font-normal px-4 py-3.5 outline-none transition-colors"
+                  style={inputStyle}
                 />
               </div>
 
@@ -148,14 +154,13 @@ export default function ContactForm({ t }) {
                 <textarea rows={3} value={formData.comment}
                   onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
                   placeholder={t.contactCommentPlaceholder}
-                  className="w-full font-jost text-[14px] px-4 py-3.5 outline-none transition-colors resize-none"
+                  className="w-full font-jost text-[14px] font-normal px-4 py-3.5 outline-none transition-colors resize-none"
                   style={inputStyle}
                   onFocus={(e) => (e.target.style.borderColor = 'var(--gold)')}
                   onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
                 />
               </div>
 
-              {/* Urgency teksts virs pogas */}
               <div className="flex items-center justify-center gap-2 py-1">
                 <span className="font-jost text-[12px] font-light" style={{ color: 'var(--oak)' }}>
                   🕐 Atbildam 2 stundu laikā darba dienās

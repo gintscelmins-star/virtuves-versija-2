@@ -9,7 +9,7 @@ export default function HeroSection({ heroImage, t }) {
             {/* H1 */}
             <h1
               className="font-playfair font-normal leading-[1.08] mb-5"
-              style={{ fontSize: 'clamp(34px, 4.8vw, 64px)', color: 'var(--charcoal)', fontFamily: 'Georgia, "Times New Roman", serif' }}
+              style={{ fontSize: 'clamp(28px, 4.8vw, 64px)', color: 'var(--charcoal)', fontFamily: 'Georgia, "Times New Roman", serif' }}
             >
               {t.heroTitle1}
               <br />
@@ -33,7 +33,7 @@ export default function HeroSection({ heroImage, t }) {
               <a
                 href="#forma"
                 className="inline-flex items-center gap-3 px-8 py-4 font-jost text-[12px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-90"
-                style={{ background: 'var(--charcoal)', color: 'var(--ivory)' }}
+                style={{ background: 'var(--charcoal)', color: 'var(--ivory)', minHeight: 52 }}
               >
                 {t.heroCta}
               </a>
@@ -48,7 +48,7 @@ export default function HeroSection({ heroImage, t }) {
           </div>
 
           {/* Right Image */}
-          <div className="md:col-span-6 relative overflow-hidden order-1 md:order-2 min-h-[340px] md:min-h-full">
+          <div className="md:col-span-6 relative overflow-hidden order-1 md:order-2 min-h-[420px] md:min-h-full">
             <img
               src={heroImage}
               alt="Premium iebūvējamā virtuve"

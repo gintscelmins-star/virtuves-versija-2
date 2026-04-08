@@ -56,20 +56,29 @@ export default function StickyHeader({ t, lang }) {
             })}
           </nav>
 
-          {/* Desktop: lang switcher */}
-          <div className="hidden md:flex items-center gap-1">
-            {Object.entries(langMeta).map(([code, meta]) => (
-              <Link key={code} to={langPaths[code]}
-                className="font-jost text-[10px] font-normal uppercase tracking-[0.08em] px-2 py-1 transition-all"
-                style={{
-                  color: lang === code ? 'var(--charcoal)' : 'var(--oak)',
-                  opacity: lang === code ? 1 : 0.5,
-                  fontWeight: lang === code ? 500 : 300,
-                  borderBottom: lang === code ? '1px solid var(--gold)' : '1px solid transparent',
-                }}>
-                {meta.label}
-              </Link>
-            ))}
+          {/* Desktop: lang switcher + CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-1">
+              {Object.entries(langMeta).map(([code, meta]) => (
+                <Link key={code} to={langPaths[code]}
+                  className="font-jost text-[10px] font-normal uppercase tracking-[0.08em] px-2 py-1 transition-all"
+                  style={{
+                    color: lang === code ? 'var(--charcoal)' : 'var(--oak)',
+                    opacity: lang === code ? 1 : 0.5,
+                    fontWeight: lang === code ? 500 : 300,
+                    borderBottom: lang === code ? '1px solid var(--gold)' : '1px solid transparent',
+                  }}>
+                  {meta.label}
+                </Link>
+              ))}
+            </div>
+            <a
+              href="#forma"
+              className="font-jost text-[10px] font-medium uppercase tracking-[0.16em] px-4 py-2.5 transition-opacity hover:opacity-85"
+              style={{ background: 'var(--charcoal)', color: 'var(--ivory)', borderRadius: 2 }}
+            >
+              {t.headerCta}
+            </a>
           </div>
 
           {/* Mobile: lang + Hamburger */}
@@ -96,7 +105,7 @@ export default function StickyHeader({ t, lang }) {
         </div>
       </header>
 
-      {/* Mobile Overlay — outside header to avoid stacking context issues */}
+      {/* Mobile Overlay */}
       {menuOpen && (
         <div
           className="fixed inset-0 z-[60] md:hidden"
@@ -105,7 +114,7 @@ export default function StickyHeader({ t, lang }) {
         />
       )}
 
-      {/* Mobile Drawer — outside header */}
+      {/* Mobile Drawer */}
       <div
         className="md:hidden fixed top-0 right-0 z-[70] h-full w-[80vw] max-w-[320px] flex flex-col"
         style={{
@@ -150,7 +159,7 @@ export default function StickyHeader({ t, lang }) {
         <div className="px-6 pb-10">
           <a href="#forma" onClick={() => setMenuOpen(false)}
             className="flex items-center justify-center py-4 font-jost text-[12px] font-medium uppercase tracking-[0.18em]"
-            style={{ background: '#1A1714', color: '#F5F0E6', borderRadius: 999 }}>
+            style={{ background: '#1A1714', color: '#F5F0E6', borderRadius: 999, minHeight: 56 }}>
             {t.mobileMenuCta}
           </a>
         </div>
