@@ -28,14 +28,21 @@ export default function HeroSection({ heroImage, t }) {
               {t.heroBody}
             </p>
 
-            {/* CTA only */}
-            <div>
+            {/* CTA bloks: primārais + sekundārais */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <a
                 href="#forma"
                 className="inline-flex items-center gap-3 px-8 py-4 font-jost text-[12px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-90"
                 style={{ background: 'var(--charcoal)', color: 'var(--ivory)' }}
               >
                 {t.heroCta}
+              </a>
+              <a
+                href="#galerija"
+                className="inline-flex items-center gap-2 font-jost text-[12px] font-normal uppercase tracking-[0.14em] transition-opacity hover:opacity-60"
+                style={{ color: 'var(--oak)', borderBottom: '1px solid var(--oak)', paddingBottom: 2 }}
+              >
+                {t.heroCtaSecondary || 'Skatīt mūsu darbus ↓'}
               </a>
             </div>
           </div>
