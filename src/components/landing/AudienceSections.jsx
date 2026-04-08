@@ -99,14 +99,14 @@ export default function AudienceSections({ t }) {
         </section>
       ))}
 
-      {/* Wardrobes — Full-width cinematic banner */}
+      {/* Wardrobes — Full-width cinematic banner (original layout) */}
       <section id="skapji" style={{ background: 'var(--charcoal)' }} className="relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[520px] md:min-h-[600px]">
-          {/* Images side */}
-          <div className="relative overflow-hidden min-h-[320px] md:min-h-full">
+          {/* Images */}
+          <div className="relative overflow-hidden min-h-[300px]">
             <img
-              src="https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/1c8aa89e4_generated_image.png"
-              alt="Premium iebūvējamie skapi"
+              src="https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/1a6df24e4_generated_image.png"
+              alt="Iebūvējamie skapji"
               loading="lazy"
               decoding="async"
               width="800"
@@ -115,26 +115,38 @@ export default function AudienceSections({ t }) {
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, transparent 60%, var(--charcoal))' }} />
-          </div>
-          {/* Text side */}
-          <div className="flex flex-col justify-center px-8 md:px-14 py-14 md:py-20 relative z-10">
-            <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-4" style={{ color: 'var(--gold)' }}>
-              {t.wardrobesEyebrow || 'Iebūvējamie skapi'}
+            <div className="absolute bottom-0 right-0 w-1/2 h-full hidden md:block">
+              <img
+                src="https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/c1d425e65_generated_image.png"
+                alt="Walk-in skapis"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="600"
+                sizes="25vw"
+                className="w-full h-full object-cover opacity-60"
+              />
             </div>
-            <h2 className="font-playfair font-normal leading-[1.15] mb-5" style={{ fontSize: 'clamp(26px, 3.5vw, 44px)', color: 'var(--white)', fontFamily: 'Georgia, serif' }}>
-              {t.wardrobesHeading || 'Tā pati meistarcilvēku izpildmeistarība'}
-              {' '}
-              <em className="italic" style={{ color: 'var(--gold)' }}>{t.wardrobesHeadingEm || '— jebkurai telpai'}</em>
+          </div>
+
+          {/* Text */}
+          <div className="flex flex-col justify-center px-8 md:px-14 py-16 md:py-24 relative z-10">
+            <div className="font-jost text-[10px] font-normal uppercase tracking-[0.26em] mb-4" style={{ color: 'var(--gold)' }}>
+              Iebūvējamie skapji
+            </div>
+            <h2 className="font-playfair font-normal leading-[1.15] mb-5" style={{ fontSize: 'clamp(24px, 3vw, 40px)', color: 'var(--white)', fontFamily: 'Georgia, serif' }}>
+              Vienota dizaina valoda{' '}
+              <em className="italic" style={{ color: 'var(--gold)' }}>visai mājai</em>
             </h2>
-            <p className="font-jost text-[16px] font-light leading-[1.85] mb-8" style={{ color: 'rgba(245,240,230,0.65)', maxWidth: 460 }}>
-              {t.wardrobesBody || 'No gātavām viesistābām līdz individuāliem sētnieccīu risinājumiem. Tie paši materiāli, tis pašs standarts.'}
+            <p className="font-jost text-[16px] font-light leading-[1.85] mb-8" style={{ color: 'rgba(245,240,230,0.6)', maxWidth: 420 }}>
+              Iebūvējamie skapji un premium garderobes, kas nevainojami turpina jūsu virtuves arhitektūras luksusa standartu.
             </p>
             <a
               href="#forma"
               className="self-start inline-flex items-center gap-3 px-7 py-3.5 font-jost text-[11px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-85"
               style={{ background: 'var(--gold)', color: 'var(--charcoal)' }}
             >
-              {t.wardrobesCta || 'Pieteikties konsultācijai'} →
+              {t.wardrobesCta || 'Sakārtot savu mājokli gudri →'}
             </a>
           </div>
         </div>
