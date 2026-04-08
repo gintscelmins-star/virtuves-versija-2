@@ -12,8 +12,9 @@ export const translations = {
     heroTitle1: 'Individuāli projekti.',
     heroTitleEm: 'Pārliecināta elegance.',
     heroTitleSub: 'Virtuve jūsu sirds ritmā.',
-    heroBody: 'Jūsu virtuve — jūsu dzīves ritma sala. Dzīves stila un gaumes bezkompromisa apliecinājums.',
-    heroCta: 'Saņemt virtuves piedāvājumu 24h laikā →',
+    heroBody: 'Iebūvējamās virtuves pēc pasūtījuma Rīgā un visā Latvijā. 984 realizēti projekti — precīza pielāgošana, skaidrs process no idejas līdz uzstādīšanai.',
+    heroCta: 'Saņemt virtuves projektu 24h laikā →',
+    heroCtaSecondary: 'Skatīt mūsu darbus ↓',
 
     // TrustBar
     trust: [
@@ -70,9 +71,9 @@ export const translations = {
     testimonialsHeading1: 'Viņu vārdos —',
     testimonialsHeadingEm: 'nevis mūsējos',
     testimonials: [
-      { quote: 'Šī ir vienīgā vieta mājās, kas ir pilnībā mana. Katrs solis ir pārdomāts tieši ap to, kā es dzīvoju.', name: 'Ilze L.', city: 'Rīga', year: '2024', initials: 'IL' },
-      { quote: 'Es domāju, ka vajadzēs gaidīt mēnešus. 3 nedēļas un virtuve bija gatava. Kvalitatīvāka, nekā iedomājos. Viņi uzmērīja, ieteica, izgatavoja. Es neko netaisīju — tikai izvēlējos. Tieši tā arī vajag.', name: 'Maija A.', city: 'Jūrmala', year: '2024', initials: 'MA' },
-      { quote: 'Paklausīju dizainera padomam un izvēlējos viņa ieteikto risinājumu. Mana sapņu virtuve priecē mani jau 10 gadus.', name: 'Sandra B.', city: 'Rīga', year: '2025', initials: 'SB' },
+      { quote: 'Šī ir vienīgā vieta mājās, kas ir pilnībā mana. Katrs solis ir pārdomāts tieši ap to, kā es dzīvoju.', name: 'Ilze L.', city: 'Rīga', year: 'Marts, 2024', initials: 'IL' },
+      { quote: 'Es domāju, ka vajadzēs gaidīt mēnešus. 3 nedēļas un virtuve bija gatava. Kvalitatīvāka, nekā iedomājos. Viņi uzmērīja, ieteica, izgatavoja. Es neko netaisīju — tikai izvēlējos. Tieši tā arī vajag.', name: 'Maija A.', city: 'Jūrmala', year: 'Septembris, 2024', initials: 'MA' },
+      { quote: 'Paklausīju dizainera padomam un izvēlējos viņa ieteikto risinājumu. Mana sapņu virtuve priecē mani jau 10 gadus.', name: 'Sandra B.', city: 'Rīga', year: 'Februāris, 2025', initials: 'SB' },
     ],
 
     // About
@@ -102,7 +103,7 @@ export const translations = {
     processSteps: [
       { num: '01', title: 'Jūs pastāstāt', body: 'Zvaniet vai aizpildiet formu. Mēs uzklausām — jūsu vēlmes, dzīvesveidu, telpu. Bez spiediena, bez saistībām.', badge: 'Bezmaksas' },
       { num: '02', title: 'Mēs ierodamies', body: 'Dizainera vizīte ar lāzera uzmērīšanu. Jūs redzat pirmo skici un tāmi — uz vietas vai 24h laikā.', badge: '1–2 dienas' },
-      { num: '03', title: 'Mēs izgatavojam', body: 'Jūsu virtuve tiek ražota — pēc jūsu apstiprinātā projekta, CNC precizitātē, bez starpniekiem. Mēs strādājam vairāk nekā 25 gadus.', badge: 'Individuāli' },
+      { num: '03', title: 'Mēs izgatavojam', body: 'Jūsu virtuve tiek ražota — pēc jūsu apstiprinātā projekta, CNC precizitātē, bez starpniekiem. Mēs strādājam vairāk nekā 25 gadus.', badge: 'CNC precizitātē' },
       { num: '04', title: 'Jūs baudāt', body: 'Montāža 1–2 dienās. Viss savā vietā — tieši tā, kā jūs to redzējāt skicē. Jūs varat sākt gatavot.', badge: '1–2 dienas' },
     ],
 
@@ -122,7 +123,7 @@ export const translations = {
     contactHeading1: 'Pastāstiet mums par',
     contactHeadingEm: 'jūsu virtuvi',
     contactBody: 'Nav nepieciešams zināt izmērus vai materiālus. Pietiek ar sajūtu — ko vēlaties, kā dzīvojat, kas jums ir svarīgs. Par pārējo parūpēsimies mēs.',
-    contactReassurance: ['Bezmaksas konsultācija', 'Bez saistībām — jūs izlemjat', 'Atbilde 24h laikā darbadienās', 'Pirmā tikšanās — pie jums vai mūsu birojā'],
+    contactReassurance: ['Bezmaksas konsultācija', 'Bez saistībām — jūs izlemjat', 'Sazināmies 2 stundu laikā darba dienās', 'Pirmā tikšanās — pie jums vai mūsu birojā'],
     contactLabelName: 'Vārds',
     contactLabelPhone: 'Telefons',
     contactLabelEmail: 'E-pasts',
@@ -130,12 +131,11 @@ export const translations = {
     contactLabelComment: 'Komentārs vai sapnis',
     contactCommentPlaceholder: 'Pāris vārdi par to, ko gribat...',
     contactSubmit: 'Saņemt savu virtuves piedāvājumu',
-
     contactSubmitting: 'Nosūta...',
-    contactFinePrint: 'Atbildēsim 24h laikā · Bez saistībām · Individuāls risinājums',
+    contactFinePrint: 'Sazināmies 2 stundu laikā darba dienās · Bez saistībām · Individuāls risinājums',
     contactThanks: 'Paldies!',
     contactThanksBody: 'Mēs sazināsimies ar jums drīzumā. Bez saistībām — jūs izlemjat, vai turpinām.',
-    serviceOptions: ['Ar dizainera vizīti', 'Man jau ir projekts', 'Vēlos konsultāciju'],
+    serviceOptions: ['Vēlos konsultāciju', 'Ar dizainera vizīti', 'Man jau ir projekts'],
 
     // Audience Sections
     audPrivateEyebrow: 'Privātmājām',
@@ -155,7 +155,7 @@ export const translations = {
     // Footer
     footerTagline: 'Jūsu virtuve, jūsu noteikumi · Kopš 1999',
     footerLinks: ['Projekti', 'Iedvesma', 'Par mums', 'Sadarbība', 'Kontakti'],
-    footerCopy: '© 2025 iebuvejamasvirtuves.lv · Rīga, Latvija',
+    footerCopy: '© 2026 iebuvejamasvirtuves.lv · Rīga, Latvija',
     footerPrivacy: 'Privātuma politika',
 
     // Phone CTA
@@ -197,7 +197,8 @@ export const translations = {
     heroTitleEm: 'your rhythm.',
     heroTitleSub: 'Individual projects.',
     heroBody: 'Your kitchen — the sanctuary of your lifestyle. An uncompromising statement of taste and living.',
-    heroCta: 'Get a kitchen quote within 24h →',
+    heroCta: 'Get your kitchen project within 24h →',
+    heroCtaSecondary: 'View our projects ↓',
 
     trust: [
       { v: '984', l: 'Projects Completed' },
@@ -234,9 +235,9 @@ export const translations = {
     testimonialsHeading1: 'In their words —',
     testimonialsHeadingEm: 'not ours',
     testimonials: [
-      { quote: 'This is the only place in the house that is entirely mine. Every step was thought out around how I live.', name: 'Ilze L.', city: 'Riga', year: '2024', initials: 'IL' },
-      { quote: 'I thought I would have to wait months. 3 weeks and the kitchen was ready. Better quality than I imagined. They measured, advised, manufactured. I did nothing — just chose. Exactly how it should be.', name: 'Maija A.', city: 'Jūrmala', year: '2024', initials: 'MA' },
-      { quote: 'I followed the designer\'s advice and chose his recommended solution. My dream kitchen has been bringing me joy for 10 years.', name: 'Sandra B.', city: 'Riga', year: '2025', initials: 'SB' },
+      { quote: 'This is the only place in the house that is entirely mine. Every step was thought out around how I live.', name: 'Ilze L.', city: 'Riga', year: 'March, 2024', initials: 'IL' },
+      { quote: 'I thought I would have to wait months. 3 weeks and the kitchen was ready. Better quality than I imagined. They measured, advised, manufactured. I did nothing — just chose. Exactly how it should be.', name: 'Maija A.', city: 'Jūrmala', year: 'September, 2024', initials: 'MA' },
+      { quote: 'I followed the designer\'s advice and chose his recommended solution. My dream kitchen has been bringing me joy for 10 years.', name: 'Sandra B.', city: 'Riga', year: 'February, 2025', initials: 'SB' },
     ],
 
     aboutEyebrow: 'About us',
@@ -263,7 +264,7 @@ export const translations = {
     processSteps: [
       { num: '01', title: 'You tell us', body: 'Call or fill in the form. We listen — your wishes, lifestyle, space. No pressure, no commitment.', badge: 'Free' },
       { num: '02', title: 'We visit', body: 'Designer visit with laser measurement. You see the first sketch and estimate — on the spot or within 24h.', badge: '1–2 days' },
-      { num: '03', title: 'We manufacture', body: 'Your kitchen is produced — to your approved design, CNC precision, no middlemen. We have been working for more than 25 years.', badge: 'Individual' },
+      { num: '03', title: 'We manufacture', body: 'Your kitchen is produced — to your approved design, CNC precision, no middlemen. We have been working for more than 25 years.', badge: 'CNC precision' },
       { num: '04', title: 'You enjoy', body: 'Installation in 1–2 days. Everything in its place — exactly as you saw it in the sketch. You can start cooking.', badge: '1–2 days' },
     ],
 
@@ -281,7 +282,7 @@ export const translations = {
     contactHeading1: 'Tell us about',
     contactHeadingEm: 'your kitchen',
     contactBody: 'No need to know dimensions or materials. A feeling is enough — what you want, how you live, what matters to you. We will take care of the rest.',
-    contactReassurance: ['Free consultation', 'No commitment — you decide', 'Reply within 24h on working days', 'First meeting — at yours or our office'],
+    contactReassurance: ['Free consultation', 'No commitment — you decide', 'We\'ll contact you within 2 hours on working days', 'First meeting — at yours or our office'],
     contactLabelName: 'Name',
     contactLabelPhone: 'Phone',
     contactLabelEmail: 'Email',
@@ -290,14 +291,14 @@ export const translations = {
     contactCommentPlaceholder: 'A few words about what you want...',
     contactSubmit: 'Get my kitchen quote',
     contactSubmitting: 'Sending...',
-    contactFinePrint: "We'll reply within 24h · No commitment · Individual solution",
+    contactFinePrint: "We'll contact you within 2 hours on working days · No commitment · Individual solution",
     contactThanks: 'Thank you!',
     contactThanksBody: 'We will be in touch with you shortly. No commitment — you decide whether to continue.',
-    serviceOptions: ['With a designer visit', 'I already have a project', 'I want a consultation'],
+    serviceOptions: ['I want a consultation', 'With a designer visit', 'I already have a project'],
 
     footerTagline: 'Your kitchen, your rules · Since 1999',
     footerLinks: ['Projects', 'Inspiration', 'About Us', 'Cooperation', 'Contacts'],
-    footerCopy: '© 2025 iebuvejamasvirtuves.lv · Riga, Latvia',
+    footerCopy: '© 2026 iebuvejamasvirtuves.lv · Riga, Latvia',
     footerPrivacy: 'Privacy Policy',
 
     phoneCta: 'Call — free consultation',
@@ -351,8 +352,9 @@ export const translations = {
     heroTitle1: 'Кухня в ритме',
     heroTitleEm: 'вашей жизни.',
     heroTitleSub: 'Индивидуальные проекты.',
-    heroBody: 'Ваша кухня — оазис вашего образа жизни. Бескомпромиссное воплощение вкуса и стиля.',
-    heroCta: 'Получить предложение по кухне за 24ч →',
+    heroBody: 'Встроенные кухни на заказ в Риге и по всей Латвии. 984 реализованных проекта — точная адаптация и чёткий процесс от идеи до установки.',
+    heroCta: 'Получить проект кухни за 24ч →',
+    heroCtaSecondary: 'Смотреть наши работы ↓',
 
     trust: [
       { v: '984', l: 'Реализованных проектов' },
@@ -389,9 +391,9 @@ export const translations = {
     testimonialsHeading1: 'Их словами —',
     testimonialsHeadingEm: 'не нашими',
     testimonials: [
-      { quote: 'Это единственное место в доме, которое полностью моё. Каждый шаг продуман именно под то, как я живу.', name: 'Илзе Л.', city: 'Рига', year: '2024', initials: 'ИЛ' },
-      { quote: 'Я думала, что придётся ждать месяцами. 3 недели и кухня была готова. Качество лучше, чем я представляла. Они замерили, предложили, изготовили. Я ничего не делала — только выбирала. Именно так и надо.', name: 'Майя А.', city: 'Юрмала', year: '2024', initials: 'МА' },
-      { quote: 'Я последовала совету дизайнера и выбрала его рекомендованное решение. Моя кухня мечты радует меня уже 10 лет.', name: 'Сандра Б.', city: 'Рига', year: '2025', initials: 'СБ' },
+      { quote: 'Это единственное место в доме, которое полностью моё. Каждый шаг продуман именно под то, как я живу.', name: 'Илзе Л.', city: 'Рига', year: 'Март, 2024', initials: 'ИЛ' },
+      { quote: 'Я думала, что придётся ждать месяцами. 3 недели и кухня была готова. Качество лучше, чем я представляла. Они замерили, предложили, изготовили. Я ничего не делала — только выбирала. Именно так и надо.', name: 'Майя А.', city: 'Юрмала', year: 'Сентябрь, 2024', initials: 'МА' },
+      { quote: 'Я последовала совету дизайнера и выбрала его рекомендованное решение. Моя кухня мечты радует меня уже 10 лет.', name: 'Сандра Б.', city: 'Рига', year: 'Февраль, 2025', initials: 'СБ' },
     ],
 
     aboutEyebrow: 'О нас',
@@ -418,7 +420,7 @@ export const translations = {
     processSteps: [
       { num: '01', title: 'Вы рассказываете', body: 'Позвоните или заполните форму. Мы слушаем — ваши пожелания, образ жизни, пространство. Без давления, без обязательств.', badge: 'Бесплатно' },
       { num: '02', title: 'Мы приезжаем', body: 'Визит дизайнера с лазерным замером. Вы видите первый эскиз и смету — на месте или в течение 24ч.', badge: '1–2 дня' },
-      { num: '03', title: 'Мы изготавливаем', body: 'Ваша кухня производится — по вашему утверждённому проекту, с CNC-точностью, без посредников. Мы работаем более 25 лет.', badge: 'Индивидуально' },
+      { num: '03', title: 'Мы изготавливаем', body: 'Ваша кухня производится — по вашему утверждённому проекту, с CNC-точностью, без посредников. Мы работаем более 25 лет.', badge: 'CNC точность' },
       { num: '04', title: 'Вы наслаждаетесь', body: 'Монтаж 1–2 дня. Всё на своём месте — именно так, как вы видели в эскизе. Вы можете начинать готовить.', badge: '1–2 дня' },
     ],
 
@@ -436,7 +438,7 @@ export const translations = {
     contactHeading1: 'Расскажите нам о',
     contactHeadingEm: 'вашей кухне',
     contactBody: 'Не нужно знать размеры или материалы. Достаточно ощущения — чего вы хотите, как живёте, что для вас важно. Обо всём остальном позаботимся мы.',
-    contactReassurance: ['Бесплатная консультация', 'Без обязательств — вы решаете', 'Ответ в течение 24ч в рабочие дни', 'Первая встреча — у вас или в нашем офисе'],
+    contactReassurance: ['Бесплатная консультация', 'Без обязательств — вы решаете', 'Свяжемся с вами в течение 2 часов в рабочие дни', 'Первая встреча — у вас или в нашем офисе'],
     contactLabelName: 'Имя',
     contactLabelPhone: 'Телефон',
     contactLabelEmail: 'E-mail',
@@ -445,14 +447,14 @@ export const translations = {
     contactCommentPlaceholder: 'Несколько слов о том, чего вы хотите...',
     contactSubmit: 'Получить предложение по кухне',
     contactSubmitting: 'Отправляем...',
-    contactFinePrint: 'Ответим за 24ч · Без обязательств · Индивидуальное решение',
+    contactFinePrint: 'Свяжемся с вами в течение 2 часов в рабочие дни · Без обязательств · Индивидуальное решение',
     contactThanks: 'Спасибо!',
     contactThanksBody: 'Мы свяжемся с вами в ближайшее время. Без обязательств — вы решаете, продолжать ли.',
-    serviceOptions: ['С визитом дизайнера', 'У меня уже есть проект', 'Хочу консультацию'],
+    serviceOptions: ['Хочу консультацию', 'С визитом дизайнера', 'У меня уже есть проект'],
 
     footerTagline: 'Ваша кухня, ваши правила · С 1999 года',
     footerLinks: ['Проекты', 'Вдохновение', 'О нас', 'Сотрудничество', 'Контакты'],
-    footerCopy: '© 2025 iebuvejamasvirtuves.lv · Рига, Латвия',
+    footerCopy: '© 2026 iebuvejamasvirtuves.lv · Рига, Латвия',
     footerPrivacy: 'Политика конфиденциальности',
 
     phoneCta: 'Позвонить — бесплатная консультация',
