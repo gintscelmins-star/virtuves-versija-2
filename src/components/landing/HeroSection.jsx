@@ -5,8 +5,6 @@ export default function HeroSection({ heroImage, t }) {
         <div className="grid grid-cols-1 md:grid-cols-12 min-h-[500px] md:min-h-[620px]">
           {/* Left Content */}
           <div className="md:col-span-6 flex flex-col justify-center px-5 md:px-10 py-12 md:py-16 order-2 md:order-1">
-
-            {/* H1 */}
             <h1
               className="font-playfair font-normal leading-[1.08] mb-5"
               style={{ fontSize: 'clamp(28px, 4.8vw, 64px)', color: 'var(--charcoal)', fontFamily: 'Georgia, "Times New Roman", serif' }}
@@ -20,7 +18,6 @@ export default function HeroSection({ heroImage, t }) {
               </span>
             </h1>
 
-            {/* Body */}
             <p
               className="font-jost font-light text-[17px] md:text-[18px] leading-[1.85] mb-8 max-w-[520px]"
               style={{ color: 'var(--muted-brown)' }}
@@ -28,7 +25,6 @@ export default function HeroSection({ heroImage, t }) {
               {t.heroBody}
             </p>
 
-            {/* CTA bloks: primārais + sekundārais */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
               <a
                 href="#forma"
@@ -57,6 +53,7 @@ export default function HeroSection({ heroImage, t }) {
               decoding="sync"
               width="800"
               height="620"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="hero-zoom absolute inset-0 w-full h-full object-cover"
             />
             <div

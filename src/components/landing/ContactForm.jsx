@@ -84,13 +84,13 @@ export default function ContactForm({ t }) {
 
           {/* Right: Form */}
           <div className="p-6 md:p-8" style={{ background: 'var(--white)' }}>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+            <form onSubmit={handleSubmit} autoComplete="on" className="flex flex-col gap-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block font-jost text-[10px] font-normal uppercase tracking-[0.18em] mb-2" style={{ color: 'var(--oak)' }}>
                     {t.contactLabelName}
                   </label>
-                  <input type="text" required value={formData.name}
+                  <input type="text" required autoComplete="name" value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     onFocus={(e) => { fireFormStart(); e.target.style.borderColor = 'var(--gold)'; }}
                     onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
@@ -102,7 +102,7 @@ export default function ContactForm({ t }) {
                   <label className="block font-jost text-[10px] font-normal uppercase tracking-[0.18em] mb-2" style={{ color: 'var(--oak)' }}>
                     {t.contactLabelPhone}
                   </label>
-                  <input type="tel" required value={formData.phone}
+                  <input type="tel" required autoComplete="tel" value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     onFocus={(e) => { fireFormStart(); e.target.style.borderColor = 'var(--gold)'; }}
                     onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
@@ -116,7 +116,7 @@ export default function ContactForm({ t }) {
                 <label className="block font-jost text-[10px] font-normal uppercase tracking-[0.18em] mb-2" style={{ color: 'var(--oak)' }}>
                   {t.contactLabelEmail}
                 </label>
-                <input type="email" required value={formData.email}
+                <input type="email" required autoComplete="email" value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   onFocus={(e) => { fireFormStart(); e.target.style.borderColor = 'var(--gold)'; }}
                   onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
