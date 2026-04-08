@@ -15,6 +15,15 @@ export default function ContactForm({ t }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...formData, service_type: formData.service_type || serviceOptions[0] }),
     });
+
+    // GA4 / GTM konversijas notikums
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'form_submit',
+      form_type: 'contact_request',
+      service_selected: formData.service_type || serviceOptions[0],
+    });
+
     setSubmitting(false);
     setSubmitted(true);
   };
@@ -101,7 +110,7 @@ export default function ContactForm({ t }) {
                 <label className="block font-jost text-[10px] font-normal uppercase tracking-[0.18em] mb-2" style={{ color: 'var(--oak)' }}>
                   {t.contactLabelEmail}
                 </label>
-                <input type="email" value={formData.email}
+                <input type="email" required value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full font-jost text-[14px] px-4 py-3.5 outline-none transition-colors"
                   style={inputStyle}
@@ -144,6 +153,13 @@ export default function ContactForm({ t }) {
                   onFocus={(e) => (e.target.style.borderColor = 'var(--gold)')}
                   onBlur={(e) => (e.target.style.borderColor = 'rgba(138,112,85,0.25)')}
                 />
+              </div>
+
+              {/* Urgency teksts virs pogas */}
+              <div className="flex items-center justify-center gap-2 py-1">
+                <span className="font-jost text-[12px] font-light" style={{ color: 'var(--oak)' }}>
+                  🕐 Atbildam 2 stundu laikā darba dienās
+                </span>
               </div>
 
               <button type="submit" disabled={submitting}
