@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { base44 } from '@/api/base44Client';
 
-// Full pool from Inspiration page — rotates per visit
 const IMAGE_POOL = [
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/b279f7c83_generated_image.png', label_lv: 'Rīga · Antracīta minimālisms', label_en: 'Riga · Anthracite Minimalism', label_ru: 'Рига · Антрацитовый минимализм' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/2bb6ec752_generated_image.png', label_lv: 'Premium · Augstās kolonnas', label_en: 'Premium · Full-Height Columns', label_ru: 'Премиум · Высокие колонны' },
@@ -11,19 +10,18 @@ const IMAGE_POOL = [
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/bf3a925bd_generated_image.png', label_lv: 'Rīga · Tumšā ozļa finierējums', label_en: 'Riga · Dark Oak Veneer', label_ru: 'Рига · Тёмный дуб' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/a694da8ef_generated_image.png', label_lv: 'Antracīts · LED', label_en: 'Anthracite · LED', label_ru: 'Антрацит · LED' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/9dd84752f_generated_image.png', label_lv: 'Silts ozols · Balts', label_en: 'Warm Oak · White', label_ru: 'Тёплый дуб · Белый' },
-  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/94b33d807_generated_image.png', label_lv: 'Melnais · Zelta akcenti', label_en: 'Black · Gold Accents', label_ru: 'Чёрный · Золотые акценты' },
-  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/e021dd5f8_generated_image.png', label_lv: 'Dūmainais ozols', label_en: 'Smoked Oak', label_ru: 'Дымчатый дуб' },
+  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/94b33d807_generated_image.png', label_lv: 'Melnāis · Zelta akcenti', label_en: 'Black · Gold Accents', label_ru: 'Чёрный · Золотые акценты' },
+  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/e021dd5f8_generated_image.png', label_lv: 'Dūmaināis ozols', label_en: 'Smoked Oak', label_ru: 'Дымчатый дуб' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/fa8e60f34_generated_image.png', label_lv: 'Tīrais baltais', label_en: 'Pure White', label_ru: 'Чистый белый' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/2640d7b1a_generated_image.png', label_lv: 'Tumšais zilas nokrāsas', label_en: 'Dark Blue Tone', label_ru: 'Тёмный синий' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/04b0af83d_generated_image.png', label_lv: 'Greige elegance', label_en: 'Greige Elegance', label_ru: 'Greige элегантность' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/fc41dd0c2_generated_image.png', label_lv: 'Valriekstu sala', label_en: 'Walnut Island', label_ru: 'Ореховый остров' },
-  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/73e29f2ec_generated_image.png', label_lv: 'Melnais · Dramatiski', label_en: 'Black · Dramatic', label_ru: 'Чёрный · Драматично' },
-  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/08761ff45_generated_image.png', label_lv: 'Pelēkais · Marmors', label_en: 'Grey · Marble', label_ru: 'Серый · Мрамор' },
+  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/73e29f2ec_generated_image.png', label_lv: 'Melnāis · Dramātiski', label_en: 'Black · Dramatic', label_ru: 'Чёрный · Драматично' },
+  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/08761ff45_generated_image.png', label_lv: 'Pelēkāis · Marmors', label_en: 'Grey · Marble', label_ru: 'Серый · Мрамор' },
   { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/4f4acf2a5_generated_image.png', label_lv: 'Divtonis · Skaidrs koks', label_en: 'Two-tone · Clear Wood', label_ru: 'Двухтон · Светлое дерево' },
-  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/e431b0966_generated_image.png', label_lv: 'Melnais · Marmora sala', label_en: 'Black · Marble Island', label_ru: 'Чёрный · Мраморный остров' },
+  { url: 'https://media.base44.com/images/public/69c13f658c0c0240c61b00fb/e431b0966_generated_image.png', label_lv: 'Melnāis · Marmora sala', label_en: 'Black · Marble Island', label_ru: 'Чёрный · Мраморный остров' },
 ];
 
-// Get a rotating offset per visit (stored in sessionStorage)
 function getVisitOffset() {
   try {
     const stored = sessionStorage.getItem('gal_offset');
@@ -57,7 +55,6 @@ export default function GallerySection({ t }) {
   return (
     <section id="galerija" style={{ background: 'var(--charcoal)' }} className="py-16 md:py-20">
       <div className="px-6 md:px-12">
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-12">
           <h2 className="font-playfair font-normal leading-[1.2]" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)', color: 'var(--white)', fontFamily: 'Georgia, serif' }}>
             {t.galleryHeading1}{' '}
@@ -68,7 +65,6 @@ export default function GallerySection({ t }) {
           </p>
         </div>
 
-        {/* 2-column grid, 3 rows */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
           {items.map((item, i) => (
             <div key={i} className="group relative overflow-hidden aspect-[4/3] cursor-pointer">
@@ -79,6 +75,7 @@ export default function GallerySection({ t }) {
                 decoding="async"
                 width="637"
                 height="477"
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-5">
@@ -93,7 +90,6 @@ export default function GallerySection({ t }) {
           ))}
         </div>
 
-        {/* Footer CTA */}
         <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
           <span className="font-playfair text-[16px] italic" style={{ color: 'var(--gold-lt)' }}>
             {t.galleryCtaLabel}

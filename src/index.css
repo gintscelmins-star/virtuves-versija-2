@@ -124,6 +124,7 @@ html {
 
 .marquee-track {
   animation: marquee 20s linear infinite;
+  will-change: transform;
 }
 
 /* FAQ transition */
