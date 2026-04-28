@@ -69,4 +69,170 @@ export default function HeroSection({ heroImage, t }) {
       </div>
     </section>
   );
+}import { useEffect, useRef } from "react";
+
+export default function HeroSection() {
+  const imgRef = useRef(null);
+
+  return (
+    <section
+      id="hero"
+      className="relative w-full overflow-hidden"
+      style={{ minHeight: '100svh', background: '#0F1117' }}
+    >
+      {/* Background attēls */}
+      <img
+        ref={imgRef}
+        src="/images/hero1.webp"
+        alt="Premium iebūvējamā virtuve"
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+        width="1500"
+        height="900"
+        className="hero-zoom absolute inset-0 w-full h-full object-cover object-center"
+        style={{ opacity: 0.55 }}
+      />
+
+      {/* Overlay — gradient no apakšas */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to top, #0F1117 0%, #0F1117 15%, rgba(15,17,23,0.55) 55%, rgba(15,17,23,0.2) 100%)'
+        }}
+      />
+
+      {/* Saturs */}
+      <div className="relative z-10 flex flex-col justify-end h-full min-h-[100svh] px-5 md:px-16 pb-16 md:pb-24 pt-32">
+
+        {/* Label */}
+        <p
+          className="mb-4 uppercase tracking-[0.22em] font-medium"
+          style={{ fontSize: 11, color: '#B8935A', fontFamily: 'Inter, sans-serif' }}
+        >
+          Individuāli mēbeļu projekti · Rīga
+        </p>
+
+        {/* H1 */}
+        <h1
+          className="leading-[1.06] mb-4 max-w-[720px]"
+          style={{
+            fontSize: 'clamp(36px, 5.5vw, 76px)',
+            color: '#FFFFFF',
+            fontFamily: 'Cormorant Garamond, Georgia, serif',
+            fontWeight: 500
+          }}
+        >
+          Mēbeles, kas dzimst
+          <br />
+          <em style={{ color: '#B8935A', fontStyle: 'italic' }}>
+            no jūsu telpas.
+          </em>
+        </h1>
+
+        {/* H2 */}
+        <p
+          className="mb-6 max-w-[560px] leading-[1.7]"
+          style={{
+            fontSize: 'clamp(16px, 2vw, 20px)',
+            color: 'rgba(255,255,255,0.72)',
+            fontFamily: 'Cormorant Garamond, Georgia, serif',
+            fontStyle: 'italic',
+            fontWeight: 400
+          }}
+        >
+          Precīza pielāgošana. Nekompromitēts rezultāts.
+        </p>
+
+        {/* Body */}
+        <p
+          className="mb-10 max-w-[500px] leading-[1.9]"
+          style={{
+            fontSize: 15,
+            color: 'rgba(255,255,255,0.58)',
+            fontFamily: 'Inter, sans-serif',
+            fontWeight: 300
+          }}
+        >
+          25 gadi Latvijas tirgū. Bezmaksas dizainera konsultācija
+          mūsu birojā. Cenas aprēķins 24 stundu laikā. 10 gadu garantija.
+        </p>
+
+        {/* CTA pogas */}
+        <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
+          <a
+            href="#forma"
+            className="inline-flex items-center gap-3 px-8 py-4 transition-opacity hover:opacity-90"
+            style={{
+              background: '#B8935A',
+              color: '#FFFFFF',
+              fontFamily: 'Inter, sans-serif',
+              fontSize: 12,
+              fontWeight: 500,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              minHeight: 52
+            }}
+          >
+            Piesakīties bezmaksas konsultācijai →
+          </a>
+          <a
+            href="#galerija"
+            className="inline-flex items-center gap-2 transition-opacity hover:opacity-60"
+            style={{
+              color: 'rgba(255,255,255,0.65)',
+              fontFamily: 'Inter, sans-serif',
+              fontSize: 12,
+              fontWeight: 400,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              borderBottom: '1px solid rgba(255,255,255,0.3)',
+              paddingBottom: 2,
+              alignSelf: 'center'
+            }}
+          >
+            Skatīt mūsu darbus ↓
+          </a>
+        </div>
+
+        {/* Trust signāli */}
+        <div
+          className="flex flex-wrap gap-x-8 gap-y-3"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.12)', paddingTop: 20 }}
+        >
+          {[
+            { num: '25', label: 'Gadi tirgū' },
+            { num: '984', label: 'Realizēti projekti' },
+            { num: '10g', label: 'Garantija' },
+            { num: '24h', label: 'Cenas aprēķins' },
+          ].map((item) => (
+            <div key={item.num} className="flex items-center gap-2">
+              <span
+                style={{
+                  fontSize: 18,
+                  fontWeight: 600,
+                  color: '#B8935A',
+                  fontFamily: 'Cormorant Garamond, serif'
+                }}
+              >
+                {item.num}
+              </span>
+              <span
+                style={{
+                  fontSize: 11,
+                  color: 'rgba(255,255,255,0.45)',
+                  fontFamily: 'Inter, sans-serif',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase'
+                }}
+              >
+                {item.label}
+              </span>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 }
