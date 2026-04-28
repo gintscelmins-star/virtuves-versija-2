@@ -4,12 +4,23 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   logLevel: 'error',
+  build: {
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          query: ['@tanstack/react-query'],
+        }
+      }
+    }
+  },
   plugins: [
     base44({
       legacySDKImports: process.env.BASE44_LEGACY_SDK_IMPORTS === 'true',
       hmrNotifier: true,
       navigationNotifier: true,
-      analyticsTracker: false,  // ← MAINĪTS
+      analyticsTracker: false,
       visualEditAgent: true
     }),
     react(),

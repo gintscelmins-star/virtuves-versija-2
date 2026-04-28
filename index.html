@@ -38,6 +38,16 @@
     <!-- Preload hero -->
     <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />
 
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+    <!-- Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -77,16 +87,6 @@
     </script>
     <!-- End Structured Data -->
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-    <!-- Fonts -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
-
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -95,7 +95,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Hero placeholder — redzams uzreiz bez JS -->
-    <div id="hero-placeholder" style="position:relative;width:100%;min-height:420px;background:#F5F0E6;overflow:hidden;">
+    <div id="hero-placeholder" style="position:relative;width:100%;height:100vh;max-height:620px;background:#F5F0E6;overflow:hidden;">
       <img
         src="/images/hero.webp"
         alt="Premium iebūvējamā virtuve"
@@ -103,20 +103,20 @@
         decoding="sync"
         width="800"
         height="620"
-        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+        style="position:absolute;inset:0;width:50%;height:100%;object-fit:cover;right:0;left:auto;"
       />
     </div>
 
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
 
     <!-- Noslēp placeholder pēc React mount -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var placeholder = document.getElementById('hero-placeholder');
-        if (placeholder) {
-          setTimeout(function() { placeholder.style.display = 'none'; }, 100);
-        }
+      var placeholder = document.getElementById('hero-placeholder');
+      function hidePlaceholder() {
+        if (placeholder) placeholder.style.display = 'none';
+      }
+      window.addEventListener('load', function() {
+        setTimeout(hidePlaceholder, 50);
       });
     </script>
   </body>
