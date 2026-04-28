@@ -46,7 +46,7 @@ export default function HeroSection({ heroImage, t }) {
           {/* Right Image */}
           <div className="md:col-span-6 relative overflow-hidden order-1 md:order-2 min-h-[420px] md:min-h-full">
             <img
-              src={heroImage}
+              src="/images/hero.webp"
               alt="Premium iebūvējamā virtuve"
               loading="eager"
               fetchpriority="high"
