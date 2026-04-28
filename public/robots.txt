@@ -1,4 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
-Sitemap: https://www.iebuvejamasvirtuves.lv/sitemap.xml
+Allow: /
+
+Sitemap: https://iebuvejamasvirtuves.lv/sitemap.xml
+Sitemap: https://pseo.iebuvejamasvirtuves.lv/sitemap.xml
