@@ -109,15 +109,15 @@
 
     <div id="root"></div>
 
-    <!-- Noslēp placeholder pēc React mount -->
-    <script>
-      var placeholder = document.getElementById('hero-placeholder');
-      function hidePlaceholder() {
-        if (placeholder) placeholder.style.display = 'none';
-      }
-      window.addEventListener('load', function() {
-        setTimeout(hidePlaceholder, 50);
-      });
-    </script>
-  </body>
-</html>
+<!-- Noslēp placeholder pēc React mount -->
+<script>
+  var placeholder = document.getElementById('hero-placeholder');
+  var observer = new MutationObserver(function() {
+    var root = document.getElementById('root');
+    if (root && root.children.length > 0) {
+      if (placeholder) placeholder.style.display = 'none';
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.getElementById('root'), { childList: true });
+</script>
