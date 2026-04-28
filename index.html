@@ -93,7 +93,31 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XZNBC4K"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Hero placeholder — redzams uzreiz bez JS -->
+    <div id="hero-placeholder" style="position:relative;width:100%;min-height:420px;background:#F5F0E6;overflow:hidden;">
+      <img
+        src="/images/hero.webp"
+        alt="Premium iebūvējamā virtuve"
+        fetchpriority="high"
+        decoding="sync"
+        width="800"
+        height="620"
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+      />
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Noslēp placeholder pēc React mount -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var placeholder = document.getElementById('hero-placeholder');
+        if (placeholder) {
+          setTimeout(function() { placeholder.style.display = 'none'; }, 100);
+        }
+      });
+    </script>
   </body>
 </html>

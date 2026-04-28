@@ -1,72 +1,123 @@
-export default function HeroSection({ heroImage, t }) {
-  return (
-    <section id="hero" style={{ background: 'var(--ivory)' }}>
-      <div>
-        <div className="grid grid-cols-1 md:grid-cols-12 min-h-[500px] md:min-h-[620px]">
-          {/* Left Content */}
-          <div className="md:col-span-6 flex flex-col justify-center px-5 md:px-10 py-12 md:py-16 order-2 md:order-1">
-            <h1
-              className="font-playfair font-normal leading-[1.08] mb-5"
-              style={{ fontSize: 'clamp(28px, 4.8vw, 64px)', color: 'var(--charcoal)', fontFamily: 'Georgia, "Times New Roman", serif' }}
-            >
-              {t.heroTitle1}
-              <br />
-              <em className="italic" style={{ color: 'var(--gold)' }}>{t.heroTitleEm}</em>
-              <br />
-              <span className="italic font-normal" style={{ fontSize: '0.52em', color: 'var(--oak)', fontFamily: 'Georgia, serif' }}>
-                {t.heroTitleSub}
-              </span>
-            </h1>
+<!doctype html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F5F0E6" />
 
-            <p
-              className="font-jost font-light text-[17px] md:text-[18px] leading-[1.85] mb-8 max-w-[520px]"
-              style={{ color: 'var(--muted-brown)' }}
-            >
-              {t.heroBody}
-            </p>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-              <a
-                href="#forma"
-                className="inline-flex items-center gap-3 px-8 py-4 font-jost text-[12px] font-medium uppercase tracking-[0.18em] transition-opacity hover:opacity-90"
-                style={{ background: 'var(--charcoal)', color: 'var(--ivory)', minHeight: 52 }}
-              >
-                {t.heroCta}
-              </a>
-              <a
-                href="#galerija"
-                className="inline-flex items-center gap-2 font-jost text-[12px] font-normal uppercase tracking-[0.14em] transition-opacity hover:opacity-60"
-                style={{ color: 'var(--oak)', borderBottom: '1px solid var(--oak)', paddingBottom: 2 }}
-              >
-                {t.heroCtaSecondary || 'Skatīt mūsu darbus ↓'}
-              </a>
-            </div>
-          </div>
+    <!-- Title & Description -->
+    <title>Iebūvējamās virtuves Rīgā — Individuāli projekti | iebuvejamasvirtuves.lv</title>
+    <meta name="description" content="Individuāli iebūvējamās virtuves Latvijā. Bezmaksas vizīte ar dizaineri. 984 realizēti projekti. 25+ gadi Latvijā. 10 gadu garantija. Sazināmies 2 stundu laikā." />
 
-          {/* Right Image */}
-          <div className="md:col-span-6 relative overflow-hidden order-1 md:order-2 min-h-[420px] md:min-h-full">
-            <img
-              src="/images/hero.webp"
-              alt="Premium iebūvējamā virtuve"
-              loading="eager"
-              fetchpriority="high"
-              decoding="sync"
-              width="800"
-              height="620"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="hero-zoom absolute inset-0 w-full h-full object-cover"
-            />
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{ background: 'linear-gradient(to bottom, var(--ivory) 0%, transparent 30%), linear-gradient(to right, var(--ivory) 0%, transparent 40%)' }}
-            />
-            <div
-              className="absolute inset-0 pointer-events-none md:hidden"
-              style={{ background: 'linear-gradient(to bottom, var(--ivory) 0%, transparent 20%)' }}
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.iebuvejamasvirtuves.lv/" />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="lv" href="https://www.iebuvejamasvirtuves.lv/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.iebuvejamasvirtuves.lv/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.iebuvejamasvirtuves.lv/" />
+    <meta property="og:title" content="Iebūvējamās virtuves Rīgā — Individuāli projekti" />
+    <meta property="og:description" content="Individuāli iebūvējamās virtuves Latvijā. Bezmaksas vizīte ar dizaineri. 984 realizēti projekti. 10 gadu garantija." />
+    <meta property="og:image" content="https://www.iebuvejamasvirtuves.lv/images/hero.webp" />
+    <meta property="og:locale" content="lv_LV" />
+    <meta property="og:site_name" content="iebuvejamasvirtuves.lv" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Iebūvējamās virtuves Rīgā — Individuāli projekti" />
+    <meta name="twitter:description" content="Individuāli iebūvējamās virtuves Latvijā. 10 gadu garantija." />
+    <meta name="twitter:image" content="https://www.iebuvejamasvirtuves.lv/images/hero.webp" />
+
+    <!-- Preload hero -->
+    <link rel="preload" as="image" href="/images/hero.webp" fetchpriority="high" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5XZNBC4K');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Iebūvējamās virtuves",
+      "url": "https://www.iebuvejamasvirtuves.lv",
+      "logo": "https://www.iebuvejamasvirtuves.lv/favicon.png",
+      "image": "https://www.iebuvejamasvirtuves.lv/images/hero.webp",
+      "description": "Individuāli iebūvējamās virtuves Latvijā. Bezmaksas vizīte ar dizaineri. 984 realizēti projekti.",
+      "telephone": "+37129325320",
+      "openingHours": "Mo-Fr 09:00-20:00",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rīga",
+        "addressLocality": "Rīga",
+        "addressCountry": "LV"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Latvia"
+      },
+      "priceRange": "€€€",
+      "sameAs": [
+        "https://www.facebook.com/iebuvejamasvirtuves",
+        "https://www.instagram.com/iebuvejamasvirtuves"
+      ]
+    }
+    </script>
+    <!-- End Structured Data -->
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+    <!-- Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" /></noscript>
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XZNBC4K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Hero placeholder — redzams uzreiz bez JS -->
+    <div id="hero-placeholder" style="position:relative;width:100%;min-height:420px;background:#F5F0E6;overflow:hidden;">
+      <img
+        src="/images/hero.webp"
+        alt="Premium iebūvējamā virtuve"
+        fetchpriority="high"
+        decoding="sync"
+        width="800"
+        height="620"
+        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+      />
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Noslēp placeholder pēc React mount -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var placeholder = document.getElementById('hero-placeholder');
+        if (placeholder) {
+          setTimeout(function() { placeholder.style.display = 'none'; }, 100);
+        }
+      });
+    </script>
+  </body>
+</html>
