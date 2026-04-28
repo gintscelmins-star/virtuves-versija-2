@@ -92,7 +92,19 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XZNBC4K"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Hero placeholder — paliek redzams līdz React pārklāj -->
+    <div style="position:fixed;inset:0;z-index:-1;background:#F5F0E6;">
+      <img
+        src="/images/hero.webp"
+        fetchpriority="high"
+        decoding="sync"
+        width="800"
+        height="620"
+        alt=""
+        style="position:absolute;right:0;top:0;width:50%;height:100%;object-fit:cover;"
+      />
+    </div>
 
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
