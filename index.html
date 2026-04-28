@@ -108,15 +108,16 @@
     </div>
 
     <div id="root"></div>
-
 <!-- Noslēp placeholder pēc React mount -->
 <script>
-  var placeholder = document.getElementById('hero-placeholder');
   var observer = new MutationObserver(function() {
     var root = document.getElementById('root');
     if (root && root.children.length > 0) {
-      if (placeholder) placeholder.style.display = 'none';
       observer.disconnect();
+      setTimeout(function() {
+        var placeholder = document.getElementById('hero-placeholder');
+        if (placeholder) placeholder.style.display = 'none';
+      }, 500);
     }
   });
   observer.observe(document.getElementById('root'), { childList: true });
